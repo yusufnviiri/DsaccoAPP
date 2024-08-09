@@ -8,6 +8,11 @@
             Text="Login Page"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Label 
+    Text="{Binding Names}"
+    VerticalOptions="Center" 
+            FontSize="20"
+    HorizontalOptions="Center" />
         <Entry HorizontalOptions="Center"
                WidthRequest="300"
                VerticalOptions="Center"

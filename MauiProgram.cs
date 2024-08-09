@@ -9,7 +9,6 @@ namespace DsaccoAPP
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
-            builder.Services.AddSingleton<UserDto>();
             builder
                 .UseMauiApp<App>()
                 .UseMauiCommunityToolkit()
@@ -22,6 +21,7 @@ namespace DsaccoAPP
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+            builder.Services.AddSingleton<UserDto>();
 
             return builder.Build();
         }

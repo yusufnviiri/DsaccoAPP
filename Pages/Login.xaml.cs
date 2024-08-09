@@ -15,27 +15,25 @@ public partial class Login : ContentPage
     string email;
 	string password;
 	//public Login(UserDto userdata)
- //   {
- //       _userDataInjector = userdata;
- //       InitializeComponent();
-	//	BindingContext=this;
- //       client = new HttpClient
- //       {
- //           BaseAddress = new Uri(baseUrl)
- //       };
- //   }
-    public Login()
-    {
-        InitializeComponent();
-        BindingContext = this;
-        client = new HttpClient
-        {
-            BaseAddress = new Uri(baseUrl)
-        };
-
-
-    }
-	public string Names {  get; set; }
+	//{
+	//	_userDataInjector = userdata;
+	//	InitializeComponent();
+	//	BindingContext = this;
+	//	client = new HttpClient
+	//	{
+	//		BaseAddress = new Uri(baseUrl)
+	//	};
+	//}
+	public Login()
+	{
+		InitializeComponent();
+		BindingContext = this;
+		client = new HttpClient
+		{
+			BaseAddress = new Uri(baseUrl)
+		};
+	}
+	public string Names { get; set; } 
     public string Email
 	{
 		get { return email; }
@@ -64,15 +62,14 @@ public partial class Login : ContentPage
 		{
             UserViewModel viewModel = new UserViewModel();
 			viewModel = await GetUser();
-            _userDataInjector.FirstName=viewModel.FName;
-            _userDataInjector.LastName=viewModel.FName;
-            _userDataInjector.Email=viewModel.Email;
-            _userDataInjector.IsPermitted=viewModel.IsPermitted;
-            _userDataInjector.Role=viewModel.Role;
+          
 			Names = $"{viewModel.LName} {viewModel.FName}";
+			Email = "";
+			Password = "";
+			var pageParams = new Dictionary<string, object> { { "usermodel",viewModel } };
 
        var route = $"{nameof(AccountData)}";
-			await Shell.Current.GoToAsync(route);
+			await Shell.Current.GoToAsync(route,pageParams);
 		}
 
     }
