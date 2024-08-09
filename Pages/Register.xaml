@@ -3,10 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DsaccoAPP.Pages.Register"
              Title="Register">
+    <ScrollView>
     <VerticalStackLayout>
+        
         <Label 
             Text="Register User"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-    </VerticalStackLayout>
+            <Grid RowDefinitions="*,*,*,*,*,*,* " ColumnDefinitions="*,*" RowSpacing="5" ColumnSpacing="10">
+
+                <Entry BackgroundColor="Blue" Grid.Row="0" 
+                       Grid.Column="0"
+                       Text="{Binding FirstName }"/>
+                <Entry BackgroundColor="Blue" Grid.Row="0" 
+       Grid.Column="1"
+       Text="{Binding LastName }"/>
+                <Entry BackgroundColor="Blue" Grid.Row="1" 
+       Grid.Column="0"
+       Text="{Binding Email  }"/>
+                <Entry BackgroundColor="Blue" Grid.Row="1" 
+       Grid.Column="1"
+       Text="{Binding Password  }"/>
+                
+               
+                <Entry  BackgroundColor="Blue" Grid.Row="3" 
+       Grid.Column="0"
+       Text="{Binding Age }"/>
+                <Button Text="Submit" Grid.Row="3" Grid.Column="1"
+                        Command=""/>
+
+
+            </Grid>
+        
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
