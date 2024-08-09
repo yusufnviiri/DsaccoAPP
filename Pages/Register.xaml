@@ -30,7 +30,7 @@
        Grid.Column="0"
        Text="{Binding Age }"/>
                 <Button Text="Submit" Grid.Row="3" Grid.Column="1"
-                        Command=""/>
+                        Clicked="RegisterUser"/>            
 
 
             </Grid>

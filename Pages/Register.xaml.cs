@@ -17,32 +17,42 @@ public partial class Register : ContentPage
     public string FirstName
     {
         get { return firstName; }
-        set { firstName = value; }
+        set { firstName = value; OnPropertyChanged();
+        }
     }
     public string LastName
     {
         get { return lastName; }
-        set { lastName = value; }
+        set { lastName = value; OnPropertyChanged();
+        }
     }
      public string Email
     {
     get { return email; }
-    set { email = value; }
-}
+    set { email = value; OnPropertyChanged();
+        }
+    }
 public string Password
 {
     get { return password; }
-    set {password  = value; }
-}
+    set {password  = value; OnPropertyChanged();
+        }
+    }
 public int Age
 {
     get { return age; }
-    set { age = value; }
-}
+    set { age = value; OnPropertyChanged();
+        }
+    }
 public bool IsPermitted
 {
     get { return isPermitted; }
-    set { isPermitted = value; }
-}
+    set { isPermitted = value; OnPropertyChanged();
+        }
+    }
 
+    private void RegisterUser(object sender, EventArgs e)
+    {
+
+    }
 }
