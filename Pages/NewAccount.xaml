@@ -46,6 +46,7 @@
       VerticalOptions="Center" 
       HorizontalOptions="Start"/>
                 <Entry WidthRequest="200"
+                       Text="{Binding OpeningAmount}"
 HorizontalOptions="Center"
 
                        
@@ -59,6 +60,8 @@ HorizontalOptions="Center"
       VerticalOptions="Center" 
  HorizontalOptions="Start"/>
                 <Entry WidthRequest="200"
+                                              Text="{Binding CurrentBalance}"
+
 HorizontalOptions="Center"
                        Placeholder="0"
                        VerticalOptions="CenterAndExpand"
@@ -66,7 +69,7 @@ HorizontalOptions="Center"
 
                 <Grid VerticalOptions="EndAndExpand" ColumnDefinitions="2*,*"  Margin="10,15">
                     <Button Grid.Column="0" Text="submit" 
-               Clicked="closepopup"/>
+               Clicked="CreateAccount"/>
                     <Button Grid.Column="1" Text="close" 
                BackgroundColor="red"
                Clicked="closepopup"/>
