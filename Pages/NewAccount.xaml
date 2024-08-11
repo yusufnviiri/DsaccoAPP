@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mct:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+           Size="400,700"
+           CanBeDismissedByTappingOutsideOfPopup="False"             
+             x:Class="DsaccoAPP.Pages.NewAccount">
+    <ScrollView Padding="10,50" BackgroundColor="#042f2e" VerticalOptions="StartAndExpand">
+        <VerticalStackLayout  >
+            <Label 
+            Text="Create New Account"
+                TextColor="#e7e5e4"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />            
+            <Picker HorizontalOptions="StartAndExpand"
+                                    TextColor="#e7e5e4"
+
+                     x:Name="accountType"
+        Title="Select Account Type">                      
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>saving</x:String>
+                        <x:String>fixed</x:String>
+                        <x:String>bussiness</x:String>                       
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Entry HorizontalOptions="StartAndExpand"
+                   Placeholder="opening amount"
+                                   TextColor="#e7e5e4"
+
+                   VerticalOptions="CenterAndExpand"
+                   Keyboard="Numeric"
+                   FontSize="20"/>
+            <Entry HorizontalOptions="StartAndExpand"
+       Placeholder="Current balance"
+                                   TextColor="#e7e5e4"
+
+       VerticalOptions="CenterAndExpand"
+       Keyboard="Numeric"
+       FontSize="20"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</mct:Popup>

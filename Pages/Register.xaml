@@ -16,24 +16,20 @@
                        Grid.Column="0"
                        Text="{Binding FirstName }"/>
                 <Entry BackgroundColor="Blue" Grid.Row="0" 
-       Grid.Column="1"
-       Text="{Binding LastName }"/>
+                       Grid.Column="1"
+                       Text="{Binding LastName }"/>
                 <Entry BackgroundColor="Blue" Grid.Row="1" 
-       Grid.Column="0"
-       Text="{Binding Email  }"/>
+                       Grid.Column="0"
+                       Keyboard="Email"
+                       Text="{Binding Email  }"/>
                 <Entry BackgroundColor="Blue" Grid.Row="1" 
-       Grid.Column="1"
-       Text="{Binding Password  }"/>
-                
-               
+                       Grid.Column="1"
+                       Text="{Binding Password  }"/>                
                 <Entry  BackgroundColor="Blue" Grid.Row="3" 
-       Grid.Column="0"
-       Text="{Binding Age }"/>
+                        Grid.Column="0"
+                        Text="{Binding Age }"/>
                 <Button Text="Submit" Grid.Row="3" Grid.Column="1"
-                        Clicked="RegisterUser"/>            
-
-
-            </Grid>
+                        Clicked="RegisterUser"/>               </Grid>
         
         </VerticalStackLayout>
     </ScrollView>

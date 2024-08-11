@@ -4,6 +4,7 @@ using DsaccoAPP.Model.Mapper;
 using DsaccoAPP.Model;
 using Newtonsoft.Json;
 using System.Text;
+using CommunityToolkit.Maui.Views;
 
 public partial class Login : ContentPage
 {
@@ -81,4 +82,9 @@ public partial class Login : ContentPage
 		return res;
 
 	}
+
+    private void CreateAccount(object sender, EventArgs e)
+    {
+		this.ShowPopupAsync(new NewAccount());
+    }
 }

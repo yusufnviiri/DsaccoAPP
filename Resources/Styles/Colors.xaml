@@ -40,5 +40,24 @@
     <Color x:Key="Blue100Accent">#3E8EED</Color>
     <Color x:Key="Blue200Accent">#72ACF1</Color>
     <Color x:Key="Blue300Accent">#A7CBF6</Color>
-
+    <Color x:Key="Slate300">#E2E8F0</Color>
+    <Color x:Key="SlateY">#0f172a</Color>
+    <Color x:Key="ZincY">#18181b</Color>
+    <Color x:Key="NeutralC">#a3a3a3</Color>
+    <Color x:Key="OrangeY">#431407</Color>
+    <Color x:Key="GreenY">#052e16</Color>
+    <Color x:Key="IndigoZ">#1e1b4b</Color>
+    <Color x:Key="BlueX">#1d4ed8</Color>
+    <Color x:Key="SkyZ">#082f49</Color>
+    <Color x:Key="TealZ">#042f2e</Color>
+    <Color x:Key="CyanZ">#083344</Color>
+    <Color x:Key="EmeraldZ">#022c22</Color>
+    <Color x:Key="EmeraldX">#065f46</Color>
+    <Color x:Key="EmeraldW">#059669</Color>
+    <Color x:Key="TealY">#115e59</Color>
+    <Color x:Key="StoneA">#f5f5f4</Color>
+    <Color x:Key="StoneC">#e7e5e4</Color>
+    <Color x:Key="StoneY">#1c1917</Color>
+    <Color x:Key="NeutralX">#262626</Color>
+    <Color x:Key="SlateC">#e2e8f0</Color>
 </ResourceDictionary>
