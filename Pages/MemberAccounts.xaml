@@ -113,7 +113,7 @@
                                     HorizontalOptions="Center" />
                                 <Label 
                                     Text="{Binding openingDate }"
-                                    Grid.Row="0" Grid.Column="1"                                    
+                                    Grid.Row="0" Grid.Column="1"                
                                     TextTransform="Uppercase"
                                     FontSize="17"
                                     FontAttributes="Bold"
@@ -126,7 +126,6 @@
                        
                     </CollectionView.ItemTemplate>
                 </CollectionView>
-
 
             </VerticalStackLayout>
         </Border>
