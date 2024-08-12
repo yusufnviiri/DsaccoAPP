@@ -9,17 +9,48 @@ public partial class MemberAccounts : Popup
 
     string baseUrl = "https://localhost:7231/api/Account/openaccount";
     static HttpClient client;
-    decimal CurrentBalance;
-   decimal InitialDeposit ;
-  decimal OpeningAmount;
-    string OpeningDate;
+    decimal currentBalance;
+    decimal initialDeposit ;
+    decimal openingAmount;
+    string openingDate;
     public MemberAccounts()
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
         client = new HttpClient
         {
             BaseAddress = new Uri(baseUrl)
-        };
+        }; }
 
+        public decimal CurrentBalance
+    {
+        get
+        {
+            return currentBalance;
+        }
+        set { currentBalance = value; OnPropertyChanged(); }
     }
+    public decimal InitialDeposit
+    {
+        get
+        {
+            return initialDeposit;
+        }
+        set { initialDeposit = value; OnPropertyChanged(); }
+    }
+    public decimal OpeningAmount
+    {
+        get
+        {
+            return openingAmount;
+        }
+        set { openingAmount = value; OnPropertyChanged(); }
+    }
+    public string OpeningDate
+    {
+        get { return openingDate; }
+        set { openingDate = value; OnPropertyChanged(); }
+    }
+
+
+
 }
