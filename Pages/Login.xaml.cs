@@ -107,14 +107,36 @@ public partial class Login : ContentPage
     {
 		this.ShowPopupAsync(new NewAccount());
     }
-    private async void GetAccounts(object sender, EventArgs e)
-    {
-		var accountsList =await GetMemberAccounts();
-		       await  this.ShowPopupAsync(new MemberAccounts(accountsList));    }
+	private async void GetAccounts(object sender, EventArgs e)
+	{
+		var accountsList = await GetMemberAccounts();
+		if (accountsList.Any())
+		{
+			await this.ShowPopupAsync(new MemberAccounts(accountsList));
+		}
+		else
+		{
+           await DisplayAlert("warning", "You need to create an account", "Ok");
+
+            this.ShowPopupAsync(new NewAccount());
+
+        }
+    }
 
     private async void CashDeposit(object sender, EventArgs e)
     {
         var accountsList = await GetMemberAccounts();
-        await this.ShowPopupAsync(new DepositPage(accountsList));
+
+        if (accountsList.Any())
+        {
+            await this.ShowPopupAsync(new DepositPage(accountsList));
+        }
+        else
+        {
+            await DisplayAlert("warning", "You need to create an account", "Ok");
+
+            this.ShowPopupAsync(new NewAccount());
+
+        }
     }
 }

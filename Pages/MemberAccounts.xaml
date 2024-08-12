@@ -21,9 +21,7 @@
                     Margin="0,15"
                     VerticalOptions="Center" 
                     HorizontalOptions="Center" />
-
-
-                <CollectionView x:Name="accountsList" BackgroundColor="#1c1917">
+                <CollectionView x:Name="accountsList" >
                     
                     <CollectionView.ItemTemplate>                  
                         <DataTemplate>
