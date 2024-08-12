@@ -25,9 +25,7 @@
 
                 <CollectionView x:Name="accountsList" BackgroundColor="#1c1917">
                     
-                    <CollectionView.ItemTemplate>
-
-                  
+                    <CollectionView.ItemTemplate>                  
                         <DataTemplate>
                         <Border Stroke="{StaticResource Primary}"
                                 StrokeThickness="3"
@@ -109,17 +107,11 @@
                                     Margin="0,2"
                                     VerticalOptions="Center" 
                                     HorizontalOptions="End" />
-
                             </Grid>
                         </Border>
-
                     </DataTemplate>
-
                 </CollectionView.ItemTemplate>
-
             </CollectionView>
-
-
         </VerticalStackLayout>
     </ScrollView>
 </mct:Popup>

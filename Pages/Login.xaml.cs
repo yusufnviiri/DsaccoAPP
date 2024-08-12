@@ -51,7 +51,7 @@ public partial class Login : ContentPage
 			OnPropertyChanged();
 		}
 	}
-
+	
     private async void loginUser(object sender, EventArgs e)
     {
 		UserLogin loginData= new UserLogin { Email=Email,Password=Password};
@@ -85,7 +85,7 @@ public partial class Login : ContentPage
 		return res;
 
 	}
-    public async Task GetMemberAccounts()
+    public async Task<List<Account>> GetMemberAccounts()
     {
         var response = await client.GetStringAsync(accountUrl);
         var res = JsonConvert.DeserializeObject<IEnumerable<Account>>(response);
@@ -96,10 +96,7 @@ public partial class Login : ContentPage
 		{
 			accounts.Add(item);
 		}
-
-
-
-        this.ShowPopupAsync(new MemberAccounts(accounts));
+		return accounts;
     }
 
 
@@ -112,7 +109,12 @@ public partial class Login : ContentPage
     }
     private async void GetAccounts(object sender, EventArgs e)
     {
-		await GetMemberAccounts();
+		var accountsList =await GetMemberAccounts();
+		       await  this.ShowPopupAsync(new MemberAccounts(accountsList));    }
 
+    private async void CashDeposit(object sender, EventArgs e)
+    {
+        var accountsList = await GetMemberAccounts();
+        await this.ShowPopupAsync(new DepositPage(accountsList));
     }
 }

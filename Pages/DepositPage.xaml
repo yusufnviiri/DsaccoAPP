@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mct:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DsaccoAPP.Pages.DepositPage"
+           
+             xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
+    <VerticalStackLayout BackgroundColor="Green">
+        <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+
+        <Picker 
+         WidthRequest="200"
+         HorizontalOptions="Center"
+         x:Name="accountType"                        
+         Title="Select Account Type">
+            
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Sore</x:String>
+                    <x:String>fixed</x:String>
+                    <x:String>bussiness</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+    </VerticalStackLayout>
+</mct:Popup>
