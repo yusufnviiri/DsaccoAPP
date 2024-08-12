@@ -45,5 +45,10 @@
          WidthRequest="150"
          VerticalOptions="Center"
          Clicked="CashDeposit"/>
+        <Button Text="Withdraw"
+ HorizontalOptions="Center"       
+ WidthRequest="150"
+ VerticalOptions="Center"
+ Clicked="CashWithdraw"/>
     </VerticalStackLayout>
 </ContentPage>

@@ -82,13 +82,14 @@ public partial class MemberAccounts : Popup
         List<Account> accounts = new List<Account>();
 
     return accounts;
-
-
-
     }
 
     private void seeAccounts(object sender, EventArgs e)
     {
         Accounts.Count();
+    }
+    private void closepopup(object sender, EventArgs e)
+    {
+        Close();
     }
 }
