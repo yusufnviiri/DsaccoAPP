@@ -6,8 +6,9 @@
               Size="250,380"
            VerticalOptions="Center"
            HorizontalOptions="Center"          
-           CanBeDismissedByTappingOutsideOfPopup="False" >  
+           CanBeDismissedByTappingOutsideOfPopup="True" >  
     <ScrollView>
+
         <Border Stroke="{StaticResource Primary}"
                 StrokeThickness="3"
                 Padding="0"
@@ -16,6 +17,9 @@
                 <RoundRectangle CornerRadius="5"/>
             </Border.StrokeShape>
             <VerticalStackLayout  BackgroundColor="#f5f5f4" Padding="10">
+
+
+                
                 <Label 
                     Text="Member Accounts"
                     TextTransform="Uppercase"
@@ -25,9 +29,9 @@
                     VerticalOptions="Center" 
                     HorizontalOptions="Center" />
 
-                <CollectionView x:Name="accountsList">
+                <CollectionView x:Name="accountsList" BackgroundColor="#1c1917">
                     <CollectionView.ItemTemplate>
-                        <DataTemplate>
+                        <DataTemplate >
                             <Grid RowDefinitions="*,*,*,*,*,*" RowSpacing="5" ColumnSpacing="10" ColumnDefinitions="2*,*">
 
                                 <Label 

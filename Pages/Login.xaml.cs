@@ -1,5 +1,6 @@
 namespace DsaccoAPP.Pages;
 using DsaccoAPP.Model.Mapper;
+using DsaccoAPP.Model.BaseClasses;
 
 using DsaccoAPP.Model;
 using Newtonsoft.Json;
@@ -12,6 +13,8 @@ public partial class Login : ContentPage
 	private UserDto _userDataInjector { get; set; }
     string baseUrl = "https://localhost:7231/api/Login/login";
 	string userUrl = "https://localhost:7231/api/Login/user";
+    string accountUrl = "https://localhost:7231/api/Account/accounts";
+
 
     string email;
 	string password;
@@ -82,14 +85,34 @@ public partial class Login : ContentPage
 		return res;
 
 	}
+    public async Task GetMemberAccounts()
+    {
+        var response = await client.GetStringAsync(accountUrl);
+        var res = JsonConvert.DeserializeObject<IEnumerable<Account>>(response);
+        List<Account> accounts = new List<Account>();
+
+
+        foreach (var item in res)
+		{
+			accounts.Add(item);
+		}
+
+
+
+        this.ShowPopupAsync(new MemberAccounts(accounts));
+    }
+
+
+
+
 
     private void CreateAccount(object sender, EventArgs e)
     {
 		this.ShowPopupAsync(new NewAccount());
     }
-    private void GetAccounts(object sender, EventArgs e)
+    private async void GetAccounts(object sender, EventArgs e)
     {
-        this.ShowPopupAsync(new MemberAccounts());
+		await GetMemberAccounts();
 
     }
 }

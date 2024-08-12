@@ -17,33 +17,23 @@ public partial class MemberAccounts : Popup
     decimal initialDeposit ;
     decimal openingAmount;
     string openingDate;
-    public MemberAccounts()
+    List<Account> accounts;
+    public List<Account> Accounts { get { return accounts; }
+        set { accounts = value; OnPropertyChanged(); }
+    }
+    public MemberAccounts(List<Account> myAccount)
     {
         InitializeComponent();
         client = new HttpClient
         {
             BaseAddress = new Uri(baseUrl)
         };
-        _initialization = new Lazy<Task>(InitializeAsync);
+
+        accountsList.ItemsSource = myAccount;
+        Accounts = myAccount;
        
     }
-
-    private async Task InitializeAsync()
-    {
-        await GetMemberAccounts(); 
        
-    }
-
-    //public async Task InitializeAsync()
-    //{
-    //    // Perform asynchronous operations here
-    //    await GetMemberAccounts();
-    //}
-
-    protected async override void OnAppearing()
-    {
-        base.OnAppearing();
-    }
     public decimal CurrentBalance
     {
         get
@@ -87,4 +77,8 @@ public partial class MemberAccounts : Popup
 
     }
 
+    private void seeAccounts(object sender, EventArgs e)
+    {
+        Accounts.Count();
+    }
 }
