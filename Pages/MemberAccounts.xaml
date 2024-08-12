@@ -3,11 +3,134 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DsaccoAPP.Pages.MemberAccounts"
              xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             Title="MemberAccounts">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+              Size="250,380"
+           VerticalOptions="Center"
+           HorizontalOptions="Center"          
+           CanBeDismissedByTappingOutsideOfPopup="False" >  
+    <ScrollView>
+        <Border Stroke="{StaticResource Primary}"
+                StrokeThickness="3"
+                Padding="0"
+                Margin="0">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="5"/>
+            </Border.StrokeShape>
+            <VerticalStackLayout  BackgroundColor="#f5f5f4" Padding="10">
+                <Label 
+                    Text="Member Accounts"
+                    TextTransform="Uppercase"
+                    FontSize="17"
+                    FontAttributes="Bold"
+                    Margin="0,15"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" />
+
+                <CollectionView x:Name="accountsList">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid RowDefinitions="*,*,*,*,*,*" RowSpacing="5" ColumnSpacing="10" ColumnDefinitions="2*,*">
+
+                                <Label 
+                                    Text="Account Description"
+                                    Grid.Row="0" Grid.Column="0"      
+                                    TextTransform="Uppercase"
+                                    FontSize="17"
+                                    FontAttributes="Bold"
+                                    Margin="0,15"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Center" />
+                                <Label 
+                                    Text="{Binding accountDescription }"
+                                    Grid.Row="0" Grid.Column="1"      
+                                    TextTransform="Uppercase"
+                                    FontSize="17"
+                                    FontAttributes="Bold"
+                                    Margin="0,15"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Center" />
+                                <Label 
+      Text="Current Balance"
+      Grid.Row="1" Grid.Column="0"      
+      TextTransform="Uppercase"
+      FontSize="17"
+      FontAttributes="Bold"
+      Margin="0,15"
+      VerticalOptions="Center" 
+      HorizontalOptions="Center" />
+                                <Label 
+      Text="{Binding currentBalance }"
+      Grid.Row="1" Grid.Column="1"      
+      TextTransform="Uppercase"
+      FontSize="17"
+      FontAttributes="Bold"
+      Margin="0,15"
+      VerticalOptions="Center" 
+      HorizontalOptions="Center" />
+                                <Label 
+      Text="Initial Deposit"
+      Grid.Row="2" Grid.Column="0"      
+      TextTransform="Uppercase"
+      FontSize="17"
+      FontAttributes="Bold"
+      Margin="0,15"
+      VerticalOptions="Center" 
+      HorizontalOptions="Center" />
+                                <Label 
+      Text="{Binding initialDeposit }"
+      Grid.Row="2" Grid.Column="1"      
+      TextTransform="Uppercase"
+      FontSize="17"
+      FontAttributes="Bold"
+      Margin="0,15"
+      VerticalOptions="Center" 
+      HorizontalOptions="Center" />
+                                <Label 
+      Text="Opening Amount"
+      Grid.Row="3" Grid.Column="0"      
+      TextTransform="Uppercase"
+      FontSize="17"
+      FontAttributes="Bold"
+      Margin="0,15"
+      VerticalOptions="Center" 
+      HorizontalOptions="Center" />
+                                <Label 
+      Text="{Binding openingAmount }"
+      Grid.Row="3" Grid.Column="1"      
+      TextTransform="Uppercase"
+      FontSize="17"
+      FontAttributes="Bold"
+      Margin="0,15"
+      VerticalOptions="Center" 
+      HorizontalOptions="Center" />
+                                <Label 
+      Text="Opening Date"
+      Grid.Row="0" Grid.Column="0"      
+      TextTransform="Uppercase"
+      FontSize="17"
+      FontAttributes="Bold"
+      Margin="0,15"
+      VerticalOptions="Center" 
+      HorizontalOptions="Center" />
+                                <Label 
+      Text="{Binding openingDate }"
+      Grid.Row="0" Grid.Column="1"      
+      TextTransform="Uppercase"
+      FontSize="17"
+      FontAttributes="Bold"
+      Margin="0,15"
+      VerticalOptions="Center" 
+      HorizontalOptions="Center" />
+
+
+
+                            </Grid>
+                        </DataTemplate>
+                       
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+
+            </VerticalStackLayout>
+        </Border>
+    </ScrollView>
 </mct:Popup>
