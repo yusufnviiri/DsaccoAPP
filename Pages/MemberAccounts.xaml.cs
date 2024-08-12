@@ -4,6 +4,8 @@ using DsaccoAPP.Model.BaseClasses;
 using System.Collections.ObjectModel;
 using Newtonsoft.Json;
 using System.Text;
+using Newtonsoft.Json.Linq;
+
 
 public partial class MemberAccounts : Popup
 {
@@ -21,14 +23,20 @@ public partial class MemberAccounts : Popup
         client = new HttpClient
         {
             BaseAddress = new Uri(baseUrl)
-        }; }
-
-    public async Task InitializeAsync()
-    {
-        // Perform asynchronous operations here
-        await GetMemberAccounts();
+        };
     }
 
+    private async Task<MemberAccounts> InitializeAsync()
+    {
+        await GetMemberAccounts(); 
+        return this;
+    }
+
+    //public async Task InitializeAsync()
+    //{
+    //    // Perform asynchronous operations here
+    //    await GetMemberAccounts();
+    //}
     public decimal CurrentBalance
     {
         get
@@ -59,11 +67,14 @@ public partial class MemberAccounts : Popup
         set { openingDate = value; OnPropertyChanged(); }
     }
 
-    public async Task GetMemberAccounts()
+    //public async Task GetMemberAccounts()
+        public async Task<List<Account>>GetMemberAccounts()
     {
         var response = await client.GetStringAsync(baseUrl);
         var res = JsonConvert.DeserializeObject<Account>(response);
         List<Account> accounts = new List<Account>();
+
+    return accounts;
 
 
 
