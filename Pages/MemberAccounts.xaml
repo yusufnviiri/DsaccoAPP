@@ -49,79 +49,77 @@
                                     VerticalOptions="Center" 
                                     HorizontalOptions="Center" />
                                 <Label 
-      Text="Current Balance"
-      Grid.Row="1" Grid.Column="0"      
-      TextTransform="Uppercase"
-      FontSize="17"
-      FontAttributes="Bold"
-      Margin="0,15"
-      VerticalOptions="Center" 
-      HorizontalOptions="Center" />
+                                    Text="Current Balance"
+                                    Grid.Row="1" Grid.Column="0"      
+                                    TextTransform="Uppercase"
+                                    FontSize="17"
+                                    FontAttributes="Bold"
+                                    Margin="0,15"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Center" />
+                                <Label                            
+                                    Text="{Binding currentBalance }"
+                                    Grid.Row="1" Grid.Column="1"      
+                                    TextTransform="Uppercase"
+                                    FontSize="17"
+                                    FontAttributes="Bold"
+                                    Margin="0,15"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Center" />
                                 <Label 
-      Text="{Binding currentBalance }"
-      Grid.Row="1" Grid.Column="1"      
-      TextTransform="Uppercase"
-      FontSize="17"
-      FontAttributes="Bold"
-      Margin="0,15"
-      VerticalOptions="Center" 
-      HorizontalOptions="Center" />
+                                    Text="Initial Deposit"
+                                    Grid.Row="2" Grid.Column="0"                
+                                    TextTransform="Uppercase"
+                                    FontSize="17"
+                                    FontAttributes="Bold"
+                                    Margin="0,15"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Center" />
                                 <Label 
-      Text="Initial Deposit"
-      Grid.Row="2" Grid.Column="0"      
-      TextTransform="Uppercase"
-      FontSize="17"
-      FontAttributes="Bold"
-      Margin="0,15"
-      VerticalOptions="Center" 
-      HorizontalOptions="Center" />
+                                    Text="{Binding initialDeposit }"
+                                    Grid.Row="2" Grid.Column="1"      
+                                    TextTransform="Uppercase"
+                                    FontSize="17"
+                                    FontAttributes="Bold"
+                                    Margin="0,15"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Center" />
                                 <Label 
-      Text="{Binding initialDeposit }"
-      Grid.Row="2" Grid.Column="1"      
-      TextTransform="Uppercase"
-      FontSize="17"
-      FontAttributes="Bold"
-      Margin="0,15"
-      VerticalOptions="Center" 
-      HorizontalOptions="Center" />
+                                    Text="Opening Amount"
+                                    Grid.Row="3" Grid.Column="0"      
+                                    TextTransform="Uppercase"
+                                    FontSize="17"
+                                    FontAttributes="Bold"
+                                    Margin="0,15"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Center" />
                                 <Label 
-      Text="Opening Amount"
-      Grid.Row="3" Grid.Column="0"      
-      TextTransform="Uppercase"
-      FontSize="17"
-      FontAttributes="Bold"
-      Margin="0,15"
-      VerticalOptions="Center" 
-      HorizontalOptions="Center" />
+                                    Text="{Binding openingAmount }"
+                                    Grid.Row="3" Grid.Column="1"      
+                                    TextTransform="Uppercase"
+                                    FontSize="17"
+                                    FontAttributes="Bold"
+                                    Margin="0,15"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Center" />
                                 <Label 
-      Text="{Binding openingAmount }"
-      Grid.Row="3" Grid.Column="1"      
-      TextTransform="Uppercase"
-      FontSize="17"
-      FontAttributes="Bold"
-      Margin="0,15"
-      VerticalOptions="Center" 
-      HorizontalOptions="Center" />
+                                    Text="Opening Date"
+                                    Grid.Row="0" Grid.Column="0"                                  
+                                    TextTransform="Uppercase"
+                                    FontSize="17"
+                                    FontAttributes="Bold"
+                                    Margin="0,15"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Center" />
                                 <Label 
-      Text="Opening Date"
-      Grid.Row="0" Grid.Column="0"      
-      TextTransform="Uppercase"
-      FontSize="17"
-      FontAttributes="Bold"
-      Margin="0,15"
-      VerticalOptions="Center" 
-      HorizontalOptions="Center" />
-                                <Label 
-      Text="{Binding openingDate }"
-      Grid.Row="0" Grid.Column="1"      
-      TextTransform="Uppercase"
-      FontSize="17"
-      FontAttributes="Bold"
-      Margin="0,15"
-      VerticalOptions="Center" 
-      HorizontalOptions="Center" />
-
-
+                                    Text="{Binding openingDate }"
+                                    Grid.Row="0" Grid.Column="1"                                    
+                                    TextTransform="Uppercase"
+                                    FontSize="17"
+                                    FontAttributes="Bold"
+                                    Margin="0,15"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Center" />
 
                             </Grid>
                         </DataTemplate>
