@@ -28,10 +28,20 @@ public partial class MemberAccounts : Popup
         {
             BaseAddress = new Uri(baseUrl)
         };
+        Accounts= myAccount;
+        updateList();
 
-        accountsList.ItemsSource = myAccount;
-        Accounts = myAccount;
-       
+        accountsList.ItemsSource = memberAccounts;     
+    }
+    public void updateList()
+    {
+        if (Accounts.Any())
+        {
+            foreach (var item in Accounts)
+            {
+                memberAccounts.Add(item);
+            }
+        }
     }
        
     public decimal CurrentBalance
