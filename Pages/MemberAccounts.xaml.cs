@@ -2,12 +2,14 @@ namespace DsaccoAPP.Pages;
 using CommunityToolkit.Maui.Views;
 using DsaccoAPP.Model.BaseClasses;
 using System.Collections.ObjectModel;
+using Newtonsoft.Json;
+using System.Text;
 
 public partial class MemberAccounts : Popup
 {
     public ObservableCollection<Account> memberAccounts { get; set; } = new ObservableCollection<Account>();
 
-    string baseUrl = "https://localhost:7231/api/Account/openaccount";
+    string baseUrl = "https://localhost:7231/api/Account/accounts";
     static HttpClient client;
     decimal currentBalance;
     decimal initialDeposit ;
@@ -21,7 +23,13 @@ public partial class MemberAccounts : Popup
             BaseAddress = new Uri(baseUrl)
         }; }
 
-        public decimal CurrentBalance
+    public async Task InitializeAsync()
+    {
+        // Perform asynchronous operations here
+        await GetMemberAccounts();
+    }
+
+    public decimal CurrentBalance
     {
         get
         {
@@ -51,6 +59,14 @@ public partial class MemberAccounts : Popup
         set { openingDate = value; OnPropertyChanged(); }
     }
 
+    public async Task GetMemberAccounts()
+    {
+        var response = await client.GetStringAsync(baseUrl);
+        var res = JsonConvert.DeserializeObject<Account>(response);
+        List<Account> accounts = new List<Account>();
 
+
+
+    }
 
 }
