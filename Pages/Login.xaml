@@ -35,5 +35,10 @@
                 WidthRequest="150"
                 VerticalOptions="Center"
                 Clicked="CreateAccount"/>
+        <Button Text="Your Accounts"
+         HorizontalOptions="Center"       
+         WidthRequest="150"
+         VerticalOptions="Center"
+         Clicked="GetAccounts"/>
     </VerticalStackLayout>
 </ContentPage>

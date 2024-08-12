@@ -64,7 +64,6 @@ public partial class NewAccount : Popup
         {
             var route = $"{nameof(Register)}";
             await Shell.Current.GoToAsync(route);
-
         }
         else
         {
