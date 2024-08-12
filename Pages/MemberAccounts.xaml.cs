@@ -10,7 +10,7 @@ using Newtonsoft.Json.Linq;
 public partial class MemberAccounts : Popup
 {
     public ObservableCollection<Account> memberAccounts { get; set; } = new ObservableCollection<Account>();
-
+    private readonly Lazy<Task> _initialization;
     string baseUrl = "https://localhost:7231/api/Account/accounts";
     static HttpClient client;
     decimal currentBalance;
@@ -24,12 +24,14 @@ public partial class MemberAccounts : Popup
         {
             BaseAddress = new Uri(baseUrl)
         };
+        _initialization = new Lazy<Task>(InitializeAsync);
+       
     }
 
-    private async Task<MemberAccounts> InitializeAsync()
+    private async Task InitializeAsync()
     {
         await GetMemberAccounts(); 
-        return this;
+       
     }
 
     //public async Task InitializeAsync()
@@ -37,6 +39,11 @@ public partial class MemberAccounts : Popup
     //    // Perform asynchronous operations here
     //    await GetMemberAccounts();
     //}
+
+    protected async override void OnAppearing()
+    {
+        base.OnAppearing();
+    }
     public decimal CurrentBalance
     {
         get
