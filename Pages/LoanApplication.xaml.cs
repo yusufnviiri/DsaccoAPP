@@ -14,6 +14,10 @@ public partial class LoanApplication : Popup
     public LoanApplication(List<LoanType>loantypes)
 	{
 		InitializeComponent();
+        client = new HttpClient
+        {
+            BaseAddress = new Uri(loanUrl)
+        };
         BindingContext = this;
         LoanTypesList = loantypes;
         loanTypePicker.ItemsSource = LoanTypesList;
