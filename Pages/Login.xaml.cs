@@ -98,12 +98,7 @@ public partial class Login : ContentPage
 		}
 		return accounts;
     }
-
-
-
-
-
-    private void CreateAccount(object sender, EventArgs e)
+        private void CreateAccount(object sender, EventArgs e)
     {
 		this.ShowPopupAsync(new NewAccount());
     }
@@ -163,13 +158,14 @@ public partial class Login : ContentPage
 
         if (accountsList.Any())
         {
-            await this.ShowPopupAsync(new Withdrawpage(accountsList));
+            this.ShowPopupAsync(new WithdrawDetails());
+
         }
         else
         {
             await DisplayAlert("warning", "You need to create an account", "Ok");
+            this.ShowPopupAsync(new NewAccount());
 
-            this.ShowPopupAsync(new WithdrawDetails());
 
         }
     }
