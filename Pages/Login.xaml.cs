@@ -157,5 +157,20 @@ public partial class Login : ContentPage
         }
     }
 
-    
+    private async void GetWithdraws(object sender, EventArgs e)
+    {
+        var accountsList = await GetMemberAccounts();
+
+        if (accountsList.Any())
+        {
+            await this.ShowPopupAsync(new Withdrawpage(accountsList));
+        }
+        else
+        {
+            await DisplayAlert("warning", "You need to create an account", "Ok");
+
+            this.ShowPopupAsync(new WithdrawDetails());
+
+        }
+    }
 }

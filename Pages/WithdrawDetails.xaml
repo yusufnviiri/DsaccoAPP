@@ -19,7 +19,15 @@
 
                     VerticalOptions="Center" 
                     HorizontalOptions="Center" />
-            <CollectionView x:Name="accountsList" >
+
+            <Grid VerticalOptions="EndAndExpand" ColumnDefinitions="2*,*"  Margin="10,15">
+                <Button Grid.Column="0" Text="Refresh" 
+            Clicked="GetMemberWithdraws"/>
+                <Button Grid.Column="1" Text="close" 
+            BackgroundColor="red"
+            Clicked="closepopup"/>
+            </Grid>
+            <CollectionView x:Name="withdarawsView" >
 
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
@@ -33,7 +41,7 @@
                             <Grid RowDefinitions="*,*,*,*,*,*" RowSpacing="5" ColumnSpacing="10" ColumnDefinitions="2*,*">
 
                                 <Label 
-                                    Text="Account Description"
+                                    Text="Date"
                                     Grid.Row="0" Grid.Column="0"      
                                     TextTransform="Uppercase"
                                     FontAttributes="Bold"
@@ -41,68 +49,41 @@
                                     VerticalOptions="Center" 
                                     HorizontalOptions="Start" />
                                 <Label 
-                                    Text="{Binding AccountDescription }"
+                                    Text="{Binding TransactionDate }"
                                     Grid.Row="0" Grid.Column="1"      
                                     FontAttributes="Bold"
                                     Margin="0,2"
                                     VerticalOptions="Center" 
                                     HorizontalOptions="End" />
                                 <Label 
-                                    Text="Current Balance"
+                                    Text="Amount Withdrawn"
                                     Grid.Row="1" Grid.Column="0"      
                                     FontAttributes="Bold"
                                     Margin="0,2"
                                     VerticalOptions="Center" 
                                     HorizontalOptions="Start" />
                                 <Label                            
-                                    Text="{Binding CurrentBalance }"
+                                    Text="{Binding Amount }"
                                     Grid.Row="1" Grid.Column="1"      
                                     FontAttributes="Bold"
                                     Margin="0,2"
                                     VerticalOptions="Center" 
                                     HorizontalOptions="End" />
                                 <Label 
-                                    Text="Initial Deposit"
+                                    Text="Reason"
                                     Grid.Row="2" Grid.Column="0"                
                                     FontAttributes="Bold"
                                     Margin="0,2"
                                     VerticalOptions="Center" 
                                     HorizontalOptions="Start" />
                                 <Label 
-                                    Text="{Binding InitialDeposit }"
+                                    Text="{Binding Reason}"
                                     Grid.Row="2" Grid.Column="1"      
                                     FontAttributes="Bold"
                                     Margin="0,2"
                                     VerticalOptions="Center" 
                                     HorizontalOptions="End" />
-                                <Label 
-                                    Text="Opening Amount"
-                                    Grid.Row="3" Grid.Column="0"      
-                                    FontAttributes="Bold"
-                                    Margin="0,2"
-                                    VerticalOptions="Center" 
-                                    HorizontalOptions="Start" />
-                                <Label 
-                                    Text="{Binding OpeningAmount }"
-                                    Grid.Row="3" Grid.Column="1"      
-                                    FontAttributes="Bold"
-                                    Margin="0,2"
-                                    VerticalOptions="Center" 
-                                    HorizontalOptions="End" />
-                                <Label 
-                                    Text="Opening Date"
-                                    Grid.Row="4" Grid.Column="0"                                  
-                                    FontAttributes="Bold"
-                                    Margin="0,5"
-                                    VerticalOptions="Center" 
-                                    HorizontalOptions="Start" />
-                                <Label 
-                                    Text="{Binding OpeningDate }"
-                                    Grid.Row="4" Grid.Column="1"                
-                                    FontAttributes="Bold"
-                                    Margin="0,2"
-                                    VerticalOptions="Center" 
-                                    HorizontalOptions="End" />
+                               
                             </Grid>
                         </Border>
                     </DataTemplate>
