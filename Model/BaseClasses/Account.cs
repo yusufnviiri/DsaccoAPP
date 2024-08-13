@@ -24,10 +24,7 @@ namespace DsaccoAPP.Model.BaseClasses
                 "fixed" => "Fixed",
                 "bussiness" => "Bussiness",
                 _ => "Savings",
-            };
-
-
-        }
+            }; }
 
         public void UpdateCurrentBalance(decimal amount)
         {

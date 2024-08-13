@@ -9,9 +9,9 @@
            CanBeDismissedByTappingOutsideOfPopup="False" 
              x:Class="DsaccoAPP.Pages.LoanApplication">
     <Border Stroke="{StaticResource Primary}"
-      StrokeThickness="3"
-      Padding="0"
-      Margin="0">
+            StrokeThickness="3"
+            Padding="0"
+            Margin="0">
         <Border.StrokeShape>
             <RoundRectangle CornerRadius="5"/>
         </Border.StrokeShape>
@@ -29,145 +29,129 @@
 
             <Grid RowDefinitions="*,*,*,*,*,*,*" ColumnDefinitions="*,*,*,*" ColumnSpacing="50" RowSpacing="5">
                 <Label  Grid.Column="0" Grid.Row="0"
-Text="Loan Type"  
-VerticalOptions="Center" 
-WidthRequest="100"               
-HorizontalOptions="Center"/>
-
+                        Text="Loan Type"  
+                        VerticalOptions="Center" 
+                        WidthRequest="100"               
+                        HorizontalOptions="Center"/>
                 <Picker   Grid.Column="1" Grid.Row="0"
-  WidthRequest="200"
-  HorizontalOptions="Center"
-  x:Name="loanTypePicker"              
-  
-  ItemDisplayBinding="{Binding Description}"      />
+                          WidthRequest="200"
+                          HorizontalOptions="Center"
+                          x:Name="loanTypePicker"                               
+                          ItemDisplayBinding="{Binding Description}"      />
                 <Label x:Name="selectedItemLabel"  FontSize="13" 
- HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                       HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
 
 
                 <Label   Grid.Column="2" Grid.Row="0"
-              Text=" Amount"  
-              VerticalOptions="Center" 
-              WidthRequest="100"               
-              HorizontalOptions="Start"/>
+                         Text=" Amount" VerticalOptions="Center" 
+                         WidthRequest="100"                            
+                         HorizontalOptions="Start"/>
                 <Entry WidthRequest="200"
                         Grid.Column="3" Grid.Row="0"
-                 Text="{Binding PrincipleAmount}"
-                 HorizontalOptions="Center"                         
-                 Placeholder="0"
-                 VerticalOptions="CenterAndExpand"  
-                 Keyboard="Numeric"/>          
-                
-                             <Label   Grid.Column="0" Grid.Row="1"
-Text="Loan Period"  
-VerticalOptions="Center" 
-WidthRequest="100"               
-HorizontalOptions="Start"/>
+                       Text="{Binding PrincipleAmount}"
+                       HorizontalOptions="Center"                           
+                       Placeholder="0"
+                       VerticalOptions="CenterAndExpand"  
+                       Keyboard="Numeric"/>    
+                <Label   Grid.Column="0" Grid.Row="1"                      
+                         Text="Loan Period"  
+                         VerticalOptions="Center" 
+                         WidthRequest="100"                    
+                         HorizontalOptions="Start"/>
                 <Entry WidthRequest="200"
-          Grid.Column="1" Grid.Row="1"
-   Text="{Binding LoanPeriod}"
-   HorizontalOptions="Center"                         
-   VerticalOptions="CenterAndExpand"                   Keyboard="Numeric"/>
-
-
+                       Grid.Column="1" Grid.Row="1"
+                       Text="{Binding LoanPeriod}"                     
+                       HorizontalOptions="Center"                       
+                       VerticalOptions="CenterAndExpand"      
+                       Keyboard="Numeric"/>
                 <Label   Grid.Column="2" Grid.Row="1"
-Text="Security"  
-VerticalOptions="Center" 
-WidthRequest="100"               
-HorizontalOptions="Start"/>
+                         Text="Security"  
+                         VerticalOptions="Center" 
+                         WidthRequest="100"                                   
+                         HorizontalOptions="Start"/>
                 <Entry WidthRequest="200"
-          Grid.Column="3" Grid.Row="1"
-   Text="{Binding Security}"
+                       Grid.Column="3" Grid.Row="1"
+                       Text="{Binding Security}"
                        Placeholder="None"
-   HorizontalOptions="Center"                         
-   VerticalOptions="CenterAndExpand"  />
+                       HorizontalOptions="Center"    
+                       VerticalOptions="CenterAndExpand"  />
 
                 <Label   Grid.Column="0" Grid.Row="2"
-Text=" First Witness Name"  
-VerticalOptions="Center" 
-WidthRequest="100"               
-HorizontalOptions="Start"/>
+                         Text=" First Witness Name"  
+                         VerticalOptions="Center" 
+                         WidthRequest="100"              
+                         HorizontalOptions="Start"/>
                 <Entry WidthRequest="200"
-          Grid.Column="1" Grid.Row="2"
-   Text="{Binding FirstWitnessName}"
-   HorizontalOptions="Center"                         
-   VerticalOptions="CenterAndExpand"  />
+                       Grid.Column="1" Grid.Row="2"
+                       Text="{Binding FirstWitnessName}"
+                       HorizontalOptions="Center"                       
+                       VerticalOptions="CenterAndExpand"  />
                 <Label   Grid.Column="2" Grid.Row="2"
-Text=" First Witness Address"  
-VerticalOptions="Center" 
-WidthRequest="100"               
-HorizontalOptions="Start"/>
+                         Text=" First Witness Address"  
+                         VerticalOptions="Center" 
+                         WidthRequest="100"               
+                         HorizontalOptions="Start"/>
                 <Entry WidthRequest="200"
-          Grid.Column="3" Grid.Row="2"
-   Text="{Binding FirstWitnessAddress}"
-   HorizontalOptions="Center"                         
-   VerticalOptions="CenterAndExpand"  />
-
-
-
-
-
+                       Grid.Column="3" Grid.Row="2"
+                       Text="{Binding FirstWitnessAddress}"
+                       HorizontalOptions="Center"                          
+                       VerticalOptions="CenterAndExpand"  />
 
                 <Label   Grid.Column="0" Grid.Row="3"
-Text=" First Witness Contact"  
-VerticalOptions="Center" 
-WidthRequest="100"               
-HorizontalOptions="Start"/>
+                         Text=" First Witness Contact"  
+                         VerticalOptions="Center" 
+                         WidthRequest="100"               
+                         HorizontalOptions="Start"/>
                 <Entry WidthRequest="200"
-          Grid.Column="1" Grid.Row="3"
-   Text="{Binding FirstWitnessContact}"
-   HorizontalOptions="Center"                         
-   VerticalOptions="CenterAndExpand"  />
+                       Grid.Column="1" Grid.Row="3"
+                       Text="{Binding FirstWitnessContact}"
+                       HorizontalOptions="Center"                      
+                       VerticalOptions="CenterAndExpand"  />
                 <Label   Grid.Column="2" Grid.Row="3"
-Text=" Second Witness Name"  
-VerticalOptions="Center" 
-WidthRequest="100"               
-HorizontalOptions="Start"/>
+                         Text=" Second Witness Name"  
+                         VerticalOptions="Center" 
+                         WidthRequest="100"              
+                         HorizontalOptions="Start"/>
                 <Entry WidthRequest="200"
-          Grid.Column="3" Grid.Row="3"
-   Text="{Binding SecondWitnessName}"
-   HorizontalOptions="Center"                         
-   VerticalOptions="CenterAndExpand"  />
-
-
+                       Grid.Column="3" Grid.Row="3"
+                       Text="{Binding SecondWitnessName}"
+                       HorizontalOptions="Center"                        
+                       VerticalOptions="CenterAndExpand"  />
                 <Label   Grid.Column="0" Grid.Row="4"
-Text="Ssecond Witness Address"  
-VerticalOptions="Center" 
-WidthRequest="100"               
-HorizontalOptions="Start"/>
+                         Text="Ssecond Witness Address"  
+                         VerticalOptions="Center" 
+                         WidthRequest="100"               
+                         HorizontalOptions="Start"/>
                 <Entry WidthRequest="200"
-          Grid.Column="1" Grid.Row="4"
-   Text="{Binding SecondWitnessAddress}"
-   HorizontalOptions="Center"                         
-   VerticalOptions="CenterAndExpand"  />
+                       Grid.Column="1" Grid.Row="4"
+                       Text="{Binding SecondWitnessAddress}"
+                       HorizontalOptions="Center"                       
+                       VerticalOptions="CenterAndExpand"  />
                 <Label   Grid.Column="2" Grid.Row="4"
-Text=" Second Witness Contact"  
-VerticalOptions="Center" 
-WidthRequest="100"               
-HorizontalOptions="Start"/>
+                         Text=" Second Witness Contact"  
+                         VerticalOptions="Center" 
+                         WidthRequest="100"               
+                         HorizontalOptions="Start"/>
                 <Entry WidthRequest="200"
-          Grid.Column="3" Grid.Row="4"
-   Text="{Binding SecondWitnessContact}"
-   HorizontalOptions="Center"                         
-   VerticalOptions="CenterAndExpand"  />
+                       Grid.Column="3" Grid.Row="4"
+                       Text="{Binding SecondWitnessContact}"
+                       HorizontalOptions="Center"                        
+                       VerticalOptions="CenterAndExpand"  />
 
                 <Label   Grid.Column="0" Grid.Row="5"
-Text=" Installlements"  
-VerticalOptions="Center" 
-WidthRequest="200"               
-HorizontalOptions="Start"/>
+                         Text=" Installlements"  
+                         VerticalOptions="Center" 
+                         WidthRequest="200"               
+                         HorizontalOptions="Start"/>
                 <Entry WidthRequest="200"
-          Grid.Column="1" Grid.Row="5"
-   Text="{Binding NumberOfInstallments}"
-   HorizontalOptions="Center"                         
-   Placeholder="0"
-   VerticalOptions="CenterAndExpand"  Keyboard="Numeric" />
-                                    
-  
-
-
-            </Grid>
-           
-            <Grid VerticalOptions="EndAndExpand" ColumnDefinitions="2*,*"  Margin="10,15">
+                       Grid.Column="1" Grid.Row="5"
+                       Text="{Binding NumberOfInstallments}"
+                       HorizontalOptions="Center"                       
+                       Placeholder="0"
+                       VerticalOptions="CenterAndExpand"  Keyboard="Numeric" />       
+                              </Grid>           
+            <Grid VerticalOptions="EndAndExpand" ColumnDefinitions="2*,*"  
+                  Margin="10,15">
                 <Button Grid.Column="0" Text="Apply" 
                       Clicked="ApplyForLoan"/>
                 <Button Grid.Column="1" Text="close" 

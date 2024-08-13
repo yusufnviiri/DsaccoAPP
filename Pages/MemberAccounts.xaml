@@ -7,9 +7,7 @@
            VerticalOptions="Center"
            HorizontalOptions="Center"          
            CanBeDismissedByTappingOutsideOfPopup="True" >  
-    <ScrollView>
-
-       
+    <ScrollView>       
             <VerticalStackLayout  BackgroundColor="#f5f5f4" Padding="10">               
                 <Label 
                     Text="Member Accounts"
