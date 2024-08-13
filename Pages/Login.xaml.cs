@@ -169,4 +169,22 @@ public partial class Login : ContentPage
 
         }
     }
+
+    private async void GetDeposits(object sender, EventArgs e)
+    {
+
+        var accountsList = await GetMemberAccounts();
+
+        if (accountsList.Any())
+        {
+            this.ShowPopupAsync(new DepositDetails());
+                    }
+        else
+        {
+            await DisplayAlert("warning", "You need to create an account", "Ok");
+            this.ShowPopupAsync(new NewAccount());
+
+
+        }
+    }
 }
