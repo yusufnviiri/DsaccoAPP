@@ -13,6 +13,7 @@ public partial class Login : ContentPage
 	private UserDto _userDataInjector { get; set; }
     string baseUrl = "https://localhost:7231/api/Login/login";
 	string userUrl = "https://localhost:7231/api/Login/user";
+    string loanTypeUrl = "https://localhost:7231/api/Loan/loantypes";
     string accountUrl = "https://localhost:7231/api/Account/accounts";
 
 
@@ -98,7 +99,21 @@ public partial class Login : ContentPage
 		}
 		return accounts;
     }
-        private void CreateAccount(object sender, EventArgs e)
+
+    public async Task<List<LoanType>> GetLoanTypes()
+    {
+        var response = await client.GetStringAsync(loanTypeUrl);
+        var res = JsonConvert.DeserializeObject<IEnumerable<LoanType>>(response);
+        List<LoanType> loanTypes = new List<LoanType>();
+
+
+        foreach (var item in res)
+        {
+            loanTypes.Add(item);
+        }
+        return loanTypes;
+    }
+    private void CreateAccount(object sender, EventArgs e)
     {
 		this.ShowPopupAsync(new NewAccount());
     }
@@ -185,4 +200,22 @@ public partial class Login : ContentPage
 
         }
     }
+
+    private async void LoanApplicatation(object sender, EventArgs e)
+    {
+        var loanTypes = await GetLoanTypes();
+
+        if (loanTypes.Any())
+        {
+            await this.ShowPopupAsync(new LoanApplication(loanTypes));
+        }
+        else
+        {
+            await DisplayAlert("warning", "You need to create an account", "Ok");
+
+            this.ShowPopupAsync(new NewAccount());
+
+        }
+    }
 }
+

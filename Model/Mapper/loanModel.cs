@@ -1,7 +1,7 @@
 ﻿
 namespace DsaccoAPP.Model.Mapper
 {
-    public class loanModel
+    public class LoanModel
     {
         public int LoanType { get; set; }
         public int NumberOfInstallments { get; set; } = 0;
