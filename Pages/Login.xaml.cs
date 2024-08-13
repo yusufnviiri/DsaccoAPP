@@ -165,9 +165,7 @@ public partial class Login : ContentPage
         {
             await DisplayAlert("warning", "You need to create an account", "Ok");
             this.ShowPopupAsync(new NewAccount());
-
-
-        }
+                    }
     }
 
     private async void GetDeposits(object sender, EventArgs e)

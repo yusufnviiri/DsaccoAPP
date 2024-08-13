@@ -53,7 +53,7 @@
                                  VerticalOptions="Center" 
                                  HorizontalOptions="End" />
                                 <Label 
-                                 Text="Amount Withdrawn"
+                                 Text="Amount Deposited"
                                  Grid.Row="1" Grid.Column="0"      
                                  FontAttributes="Bold"
                                  Margin="0,2"
