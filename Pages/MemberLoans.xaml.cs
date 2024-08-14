@@ -23,7 +23,7 @@ public partial class MemberLoans : Popup
         BindingContext = this;
     }
 
-    private async void GetMemberDeposits(object sender, EventArgs e)
+    private async void GetMemberLoans(object sender, EventArgs e)
     {
         var response = await client.GetStringAsync(baseUrl);
         var res = JsonConvert.DeserializeObject<IEnumerable<Loan>>(response);

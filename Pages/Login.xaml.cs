@@ -224,13 +224,13 @@ public partial class Login : ContentPage
 
         if (loanTypes.Any())
         {
-            await this.ShowPopupAsync(new LoanApplication(loanTypes));
+            this.ShowPopupAsync(new MemberLoans());
+
         }
         else
         {
             await DisplayAlert("warning", "You need to create an account", "Ok");
 
-            this.ShowPopupAsync(new MemberLoans());
 
         }
     }
