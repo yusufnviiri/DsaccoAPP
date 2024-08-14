@@ -14,14 +14,15 @@ public partial class LoanApplication : Popup
     public LoanApplication(List<LoanType>loantypes)
 	{
 		InitializeComponent();
+        loanTypeSelected=loantypes;
         client = new HttpClient
         {
             BaseAddress = new Uri(loanUrl)
         };
         BindingContext = this;
         LoanTypesList = loantypes;
-        loanTypePicker.ItemsSource = LoanTypesList;
-       loanTypePicker.SelectedIndexChanged += OnPickerSelectedIndexChanged;
+        accountTypePicker.ItemsSource = loanTypeSelected;
+        accountTypePicker.SelectedIndexChanged += OnPickerSelectedIndexChanged;
     }
 
     int loanType;
@@ -36,7 +37,7 @@ public partial class LoanApplication : Popup
     string secondWitnessAddress;
     string secondWitnessContact;
 
-    public LoanType loanTypeSelected { get; set; } = new LoanType();
+    public List<LoanType> loanTypeSelected { get; set; } = new List<LoanType>();
    public int LoanType
     {        get { return loanType; }
         set { loanType = value; OnPropertyChanged(); } }
@@ -94,7 +95,7 @@ set { numberOfInstallments = value; OnPropertyChanged(); } }
     private void OnPickerSelectedIndexChanged(object sender, System.EventArgs e)
     {
         // Get the selected item
-        var selectedItem = (LoanType)loanTypePicker.SelectedItem;
+        var selectedItem = (LoanType)accountTypePicker.SelectedItem;
 
         // Display the selected item
         if (selectedItem != null)
