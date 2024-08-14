@@ -217,5 +217,22 @@ public partial class Login : ContentPage
 
         }
     }
+
+    private async void GetMemberLoans(object sender, EventArgs e)
+    {
+        var loanTypes = await GetLoanTypes();
+
+        if (loanTypes.Any())
+        {
+            await this.ShowPopupAsync(new LoanApplication(loanTypes));
+        }
+        else
+        {
+            await DisplayAlert("warning", "You need to create an account", "Ok");
+
+            this.ShowPopupAsync(new MemberLoans());
+
+        }
+    }
 }
 

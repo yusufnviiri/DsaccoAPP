@@ -65,5 +65,10 @@ HorizontalOptions="Center"
 WidthRequest="150"
 VerticalOptions="Center"
 Clicked="GetWithdraws"/>
+        <Button Text="Your loans"
+HorizontalOptions="Center"       
+WidthRequest="150"
+VerticalOptions="Center"
+Clicked="GetMemberLoans"/>
     </VerticalStackLayout>
 </ContentPage>
