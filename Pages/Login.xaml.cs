@@ -217,5 +217,15 @@ public partial class Login : ContentPage
 
         }
     }
+
+    private void PurchaseShares(object sender, EventArgs e)
+    {
+
+    }
+
+    private void SellMemberShares(object sender, EventArgs e)
+    {
+
+    }
 }
 
