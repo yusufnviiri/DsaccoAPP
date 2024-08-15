@@ -2,13 +2,13 @@
 <mct:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"        
            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
            xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-           Size="320,650"
+           Size="320,630"
            VerticalOptions="Center"           
            HorizontalOptions="Center"
            CanBeDismissedByTappingOutsideOfPopup="False"
            x:Class="DsaccoAPP.Pages.MemberLoans">
     <ScrollView>
-        <VerticalStackLayout BackgroundColor="#022c22"  Padding="10">
+        <VerticalStackLayout BackgroundColor="#022c22" Padding="10"  >
             <Label 
            Text="Loans"
            TextTransform="Uppercase"
@@ -18,7 +18,7 @@
            VerticalOptions="Center"              
            HorizontalOptions="Center" />
 
-            <Grid VerticalOptions="EndAndExpand"  ColumnDefinitions="2*,*" ColumnSpacing="5" Margin="5">
+            <Grid VerticalOptions="EndAndExpand"  ColumnDefinitions="2*,*" ColumnSpacing="5" Margin="5" >
                 <Button Grid.Column="0" Text="REFRESH" FontAttributes="Bold" CharacterSpacing="3" BackgroundColor="#1d4ed8"
        Clicked="GetMemberLoans"/>
                 <Button Grid.Column="1" Text="CLOSE" FontAttributes="Bold" CharacterSpacing="3"
@@ -29,9 +29,9 @@
 
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Border Stroke="{StaticResource Primary}"
+                        <Border Stroke="{StaticResource Yellow100Accent}"
                            StrokeThickness="3"
-                           Padding="5,0"
+                           Padding="10,5"
                            Margin="0,10">
                             <Border.StrokeShape>
                                 <RoundRectangle CornerRadius="10"/>
@@ -52,7 +52,7 @@
                                     Grid.Row="0" Grid.Column="1"      
                                     FontAttributes="Bold"
                                     FontSize="13"
-                                    TextColor="#f5f5f4"                                
+                                    TextColor="#F7B548"                                
                                     Margin="0,2"
                                     VerticalOptions="Center" 
                                     HorizontalOptions="End" />
@@ -73,7 +73,7 @@
                                     Margin="0,2"
                                     VerticalOptions="Center" 
                                     FontSize="13"
-                                    TextColor="#f5f5f4"
+                                    TextColor="#F7B548"
                                     HorizontalOptions="End" />
                                 <Label 
                                     Text="Loan Period"
