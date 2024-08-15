@@ -59,6 +59,9 @@
 	  <MauiXaml Update="Pages\AccountData.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\BuyShares.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\DepositDetails.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
