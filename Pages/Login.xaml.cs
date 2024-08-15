@@ -227,5 +227,11 @@ public partial class Login : ContentPage
     {
 
     }
+
+    private void GetMemberLoans(object sender, EventArgs e)
+    {
+        this.ShowPopupAsync(new MemberLoans());
+
+    }
 }
 
