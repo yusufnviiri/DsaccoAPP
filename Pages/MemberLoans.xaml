@@ -36,7 +36,7 @@
                             <Border.StrokeShape>
                                 <RoundRectangle CornerRadius="10"/>
                             </Border.StrokeShape>
-                            <Grid RowDefinitions="*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*" RowSpacing="5" ColumnSpacing="6" ColumnDefinitions="2*,*">                             
+                            <Grid RowDefinitions="*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*" RowSpacing="5" ColumnSpacing="6" ColumnDefinitions="2*,*">
                                 <Label 
                                     Text="loan Category"
                                     Grid.Row="0" Grid.Column="0"     
@@ -172,7 +172,7 @@
                                          Margin="0,7"
                                          VerticalOptions="Center" 
                                          HorizontalOptions="Start" />
-                                <Label    
+                                <Label 
                                     FontSize="13"
                                     TextColor="#f5f5f4"                  
                                     Text="{Binding Status }"
@@ -213,107 +213,129 @@
                                          Grid.Row="9" Grid.Column="1"     
                                          FontAttributes="Bold"
                                          Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="End" />
+                                         VerticalOptions="Center" 
+                                         HorizontalOptions="End" />
+                                <Label  
+                                    FontSize="13"
+                                    TextColor="#f5f5f4"
+                                    Text="Security"
+                                    Grid.Row="10" Grid.Column="0"     
+                                    FontAttributes="Bold"
+                                    Margin="0,2"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Start" />
+                                <Label    FontSize="13"
+                                          TextColor="#f5f5f4"                        
+                                          Text="{Binding Security }"
+                                          Grid.Row="10" Grid.Column="1"      
+                                          FontAttributes="Bold"
+                                          Margin="0,2"
+                                          VerticalOptions="Center" 
+                                          HorizontalOptions="End" />
+                                <Label  
+                                    FontSize="13"
+                                    TextColor="#f5f5f4"
+                                    Text="First Witness Name"
+                                    Grid.Row="11" Grid.Column="0"               
+                                    FontAttributes="Bold"
+                                    Margin="0,2"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Start" />
+                                <Label   FontSize="13"
+                                         TextColor="#f5f5f4"
+                                         Text="{Binding FirstWitnessName }"
+                                         Grid.Row="11" Grid.Column="1"     
+                                         FontAttributes="Bold"
+                                         Margin="0,2"
+                                         VerticalOptions="Center" 
+                                         HorizontalOptions="End" />
                                 <Label 
-Text="Security"
-Grid.Row="10" Grid.Column="0"      
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
-                                <Label                            
-Text="{Binding Security }"
-Grid.Row="10" Grid.Column="1"      
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="End" />
-                                <Label 
-Text="First Witness Name"
-Grid.Row="11" Grid.Column="0"                
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
-                                <Label 
-Text="{Binding FirstWitnessName }"
-Grid.Row="11" Grid.Column="1"      
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="End" />
-                                <Label 
-Text="First Witness Address"
-Grid.Row="12" Grid.Column="0"                
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
-                                <Label 
-Text="{Binding FirstWitnessAddress }"
-Grid.Row="12" Grid.Column="1"      
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="End" />
-                                <Label 
-Text="First Witness Contact"
-Grid.Row="13" Grid.Column="0"                
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
-                                <Label 
-Text="{Binding FirstWitnessContact }"
-Grid.Row="13" Grid.Column="1"      
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="End" />
-                                <Label 
-Text="Second Witness Name"
-Grid.Row="14" Grid.Column="0"                
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
-                                <Label 
-Text="{Binding SecondWitnessName }"
-Grid.Row="14" Grid.Column="1"      
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="End" />
-                                <Label 
-Text="Second Witness Address"
-Grid.Row="15" Grid.Column="0"                
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
-                                <Label 
-Text="{Binding SecondWitnessAddress}"
-Grid.Row="15" Grid.Column="1"      
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="End" />
-                                <Label 
-Text="Second Witness Contact"
-Grid.Row="16" Grid.Column="0"                
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
-                                <Label 
-Text="{Binding SecondWitnessContact }"
-Grid.Row="16" Grid.Column="1"      
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="End" />
-                                
+                                    FontSize="13"
+                                    TextColor="#f5f5f4"
+                                    Text="First Witness Address"
+                                    Grid.Row="12" Grid.Column="0"              
+                                    FontAttributes="Bold"
+                                    Margin="0,2"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Start" />
+                                <Label   FontSize="13"
+                                         TextColor="#f5f5f4"
+                                         Text="{Binding FirstWitnessAddress }"
+                                         Grid.Row="12" Grid.Column="1"      
+                                         FontAttributes="Bold"
+                                         Margin="0,2"
+                                         VerticalOptions="Center" 
+                                         HorizontalOptions="End" />
+                                <Label  
+                                    FontSize="13"
+                                    TextColor="#f5f5f4"
+                                    Text="First Witness Contact"
+                                    Grid.Row="13" Grid.Column="0"               
+                                    FontAttributes="Bold"
+                                    Margin="0,2"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Start" />
+                                <Label   FontSize="13"
+                                         TextColor="#f5f5f4"
+                                         Text="{Binding FirstWitnessContact }"
+                                         Grid.Row="13" Grid.Column="1"      
+                                         FontAttributes="Bold"
+                                         Margin="0,2"
+                                         VerticalOptions="Center" 
+                                         HorizontalOptions="End" />
+                                <Label  
+                                    FontSize="13"
+                                    TextColor="#f5f5f4"
+                                    Text="Second Witness Name"
+                                    Grid.Row="14" Grid.Column="0"                
+                                    FontAttributes="Bold"
+                                    Margin="0,2"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Start" />
+                                <Label   FontSize="13"
+                                         TextColor="#f5f5f4"
+                                         Text="{Binding SecondWitnessName }"
+                                         Grid.Row="14" Grid.Column="1"      
+                                         FontAttributes="Bold"
+                                         Margin="0,2"
+                                         VerticalOptions="Center" 
+                                         HorizontalOptions="End" />
+                                <Label   
+                                    FontSize="13"
+                                    TextColor="#f5f5f4"
+                                    Text="Second Witness Address"
+                                    Grid.Row="15" Grid.Column="0"            
+                                    FontAttributes="Bold"
+                                    Margin="0,2"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Start" />
+                                <Label   FontSize="13"
+                                         TextColor="#f5f5f4"
+                                         Text="{Binding SecondWitnessAddress}"
+                                         Grid.Row="15" Grid.Column="1"      
+                                         FontAttributes="Bold"
+                                         Margin="0,2"
+                                         VerticalOptions="Center" 
+                                         HorizontalOptions="End" />
+                                <Label  
+                                    FontSize="13"
+                                    TextColor="#f5f5f4"
+                                    Text="Second Witness Contact"
+                                    Grid.Row="16" Grid.Column="0"             
+                                    FontAttributes="Bold"
+                                    Margin="0,2"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Start" />
+                                <Label  
+                                    FontSize="13"
+                                    TextColor="#f5f5f4"
+                                    Text="{Binding SecondWitnessContact }"
+                                    Grid.Row="16" Grid.Column="1"      
+                                    FontAttributes="Bold"
+                                    Margin="0,2"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="End" />
+
 
                             </Grid>
                         </Border>
