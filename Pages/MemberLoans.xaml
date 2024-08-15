@@ -19,7 +19,7 @@
            HorizontalOptions="Center" />
 
             <Grid VerticalOptions="EndAndExpand"  ColumnDefinitions="2*,*" ColumnSpacing="5" Margin="5">
-                <Button Grid.Column="0" Text="REFRESH" FontAttributes="Bold" CharacterSpacing="3" HeightRequest="50" BackgroundColor="#1d4ed8"
+                <Button Grid.Column="0" Text="REFRESH" FontAttributes="Bold" CharacterSpacing="3" BackgroundColor="#1d4ed8"
        Clicked="GetMemberLoans"/>
                 <Button Grid.Column="1" Text="CLOSE" FontAttributes="Bold" CharacterSpacing="3"
        BackgroundColor="red"
@@ -36,156 +36,183 @@
                             <Border.StrokeShape>
                                 <RoundRectangle CornerRadius="10"/>
                             </Border.StrokeShape>
-                            <Grid RowDefinitions="*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*" RowSpacing="5" ColumnSpacing="6" ColumnDefinitions="2*,*">
-
-                             
+                            <Grid RowDefinitions="*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*" RowSpacing="5" ColumnSpacing="6" ColumnDefinitions="2*,*">                             
                                 <Label 
-Text="loanType"
-Grid.Row="0" Grid.Column="0"      
-TextTransform="Uppercase"
-FontAttributes="Bold"
-Margin="0,2"
+                                    Text="loan Category"
+                                    Grid.Row="0" Grid.Column="0"     
+                                    TextTransform="Uppercase"
+                                    FontAttributes="Bold"
+                                    Margin="0,2"
                                     FontSize="13"
                                     TextColor="#f5f5f4"
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Start" />
                                 <Label 
-Text="{Binding LoanTypeDescription }"
-Grid.Row="0" Grid.Column="1"      
-FontAttributes="Bold"
+                                    Text="{Binding LoanTypeDescription }"
+                                    Grid.Row="0" Grid.Column="1"      
+                                    FontAttributes="Bold"
                                     FontSize="13"
-                                    TextColor="#f5f5f4"
-
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="End" />
+                                    TextColor="#f5f5f4"                                
+                                    Margin="0,2"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="End" />
                                 <Label 
                                     Text="Amount Applied"
-Grid.Row="1" Grid.Column="0"      
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
-                                <Label                            
-Text="{Binding   PrincipleAmount}"
-Grid.Row="1" Grid.Column="1"      
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="End" />
+                                    Grid.Row="1" Grid.Column="0"      
+                                    FontAttributes="Bold"
+                                    Margin="0,2"
+                                    VerticalOptions="Center" 
+                                    FontSize="13"
+                                    TextColor="#f5f5f4"
+                                    HorizontalOptions="Start" />
+                                <Label
+                                    
+                                    Text="{Binding   PrincipleAmount}"
+                                    Grid.Row="1" Grid.Column="1"      
+                                    FontAttributes="Bold"
+                                    Margin="0,2"
+                                    VerticalOptions="Center" 
+                                    FontSize="13"
+                                    TextColor="#f5f5f4"
+                                    HorizontalOptions="End" />
                                 <Label 
-Text="Loan Period"
-Grid.Row="2" Grid.Column="0"                
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
+                                    Text="Loan Period"
+                                    Grid.Row="2" Grid.Column="0"      
+                                    FontAttributes="Bold"
+                                    Margin="0,2"
+                                    FontSize="13"
+                                    TextColor="#f5f5f4"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Start" />
                                 <Label 
-Text="{Binding LoanPeriod }"
-Grid.Row="2" Grid.Column="1"      
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="End" />
+                                    FontSize="13"
+                                    TextColor="#f5f5f4"
+                                    Text="{Binding LoanPeriod }"
+                                    Grid.Row="2" Grid.Column="1"                            
+                                    FontAttributes="Bold"
+                                    Margin="0,2"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="End" />
                                 <Label 
-Text="Current Payments"
-Grid.Row="3" Grid.Column="0"      
-TextTransform="Uppercase"
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
+                                    FontSize="13"
+                                    TextColor="#f5f5f4"
+                                    Text="Current Payments"
+                                    Grid.Row="3" Grid.Column="0"    
+                                    TextTransform="Uppercase"
+                                    FontAttributes="Bold"
+                                    Margin="0,2"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Start" />
+                                <Label  
+                                    FontSize="13"
+                                    TextColor="#f5f5f4"
+                                    Text="{Binding NumberOfPayments  }"
+                                    Grid.Row="3" Grid.Column="1"      
+                                    FontAttributes="Bold"
+                                    Margin="0,2"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="End" />
+                                <Label   FontSize="13"
+                                         TextColor="#f5f5f4"
+                                         Text="Pay Amount"
+                                         Grid.Row="4" Grid.Column="0"     
+                                         FontAttributes="Bold"
+                                         Margin="0,2"
+                                         VerticalOptions="Center" 
+                                         HorizontalOptions="Start" />
+                                <Label   
+                                    FontSize="13"
+                                    TextColor="#f5f5f4"                                    
+                                    Text="{Binding PayAmount  }"
+                                    Grid.Row="4" Grid.Column="1"      
+                                    FontAttributes="Bold"
+                                    Margin="0,2"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="End" />
+                                <Label   FontSize="13"
+                                         TextColor="#f5f5f4"
+                                         Text="Outstanding Balance"
+                                         Grid.Row="5" Grid.Column="0"     
+                                         FontAttributes="Bold"
+                                         Margin="0,2"
+                                         VerticalOptions="Center" 
+                                         HorizontalOptions="Start" />
                                 <Label 
-Text="{Binding NumberOfPayments  }"
-Grid.Row="3" Grid.Column="1"      
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="End" />
+                                    FontSize="13"
+                                    TextColor="#f5f5f4"
+                                    Text="{Binding OutstandingBalance}"
+                                    Grid.Row="5" Grid.Column="1"      
+                                    FontAttributes="Bold"
+                                    Margin="0,2"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="End" />
+                                <Label   FontSize="13"
+                                         TextColor="#f5f5f4"
+                                         Text="Loan Interest"
+                                         Grid.Row="6" Grid.Column="0"      
+                                         TextTransform="Uppercase"
+                                         FontAttributes="Bold"
+                                         Margin="0,2"
+                                         VerticalOptions="Center" 
+                                         HorizontalOptions="Start" />
                                 <Label 
-Text="Pay Amount"
-Grid.Row="4" Grid.Column="0"      
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
-                                <Label                            
-Text="{Binding PayAmount  }"
-Grid.Row="4" Grid.Column="1"      
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="End" />
+                                    FontSize="13"
+                                    TextColor="#f5f5f4"
+                                    Text="{Binding LoanInterest }"
+                                    Grid.Row="6" Grid.Column="1"      
+                                    FontAttributes="Bold"
+                                    Margin="0,2"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="End" />
+                                <Label   FontSize="13"
+                                         TextColor="#f5f5f4"
+                                         Text="Status"
+                                         Grid.Row="7" Grid.Column="0"  
+                                         FontAttributes="Bold"
+                                         Margin="0,7"
+                                         VerticalOptions="Center" 
+                                         HorizontalOptions="Start" />
+                                <Label    
+                                    FontSize="13"
+                                    TextColor="#f5f5f4"                  
+                                    Text="{Binding Status }"
+                                    Grid.Row="7" Grid.Column="1"      
+                                    FontAttributes="Bold"
+                                    Margin="0,2"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="End" />
                                 <Label 
-Text="Outstanding Balance"
-Grid.Row="5" Grid.Column="0"                
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
-                                <Label 
-Text="{Binding OutstandingBalance}"
-Grid.Row="5" Grid.Column="1"      
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="End" />
-                                <Label 
-Text="Loan Interest"
-Grid.Row="6" Grid.Column="0"      
-TextTransform="Uppercase"
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
-                                <Label 
-Text="{Binding LoanInterest }"
-Grid.Row="6" Grid.Column="1"      
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="End" />
-                                <Label 
-Text="Status"
-Grid.Row="7" Grid.Column="0"      
-FontAttributes="Bold"
-Margin="0,7"
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
-                                <Label                            
-Text="{Binding Status }"
-Grid.Row="7" Grid.Column="1"      
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="End" />
-                                <Label 
-Text="Installments"
-Grid.Row="8" Grid.Column="0"                
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
-                                <Label 
-Text="{Binding NumberOfInstallments }"
-Grid.Row="8" Grid.Column="1"      
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="End" />
-                                <Label 
-Text="Completed?"
-Grid.Row="9" Grid.Column="0"      
-TextTransform="Uppercase"
-FontAttributes="Bold"
-Margin="0,2"
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
-                                <Label 
-Text="{Binding Iscompleted  }"
-Grid.Row="9" Grid.Column="1"      
-FontAttributes="Bold"
-Margin="0,2"
+                                    Text="Installments"
+                                    Grid.Row="8" Grid.Column="0"                
+                                    FontAttributes="Bold"
+                                    Margin="0,2"  FontSize="13"
+                                    TextColor="#f5f5f4"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Start" />
+                                <Label   FontSize="13"
+                                         TextColor="#f5f5f4"
+                                         Text="{Binding NumberOfInstallments }"
+                                         Grid.Row="8" Grid.Column="1"      
+                                         FontAttributes="Bold"
+                                         Margin="0,2"
+                                         VerticalOptions="Center" 
+                                         HorizontalOptions="End" />
+                                <Label  
+                                    FontSize="13"
+                                    TextColor="#f5f5f4"
+                                    Text="Completed?"
+                                    Grid.Row="9" Grid.Column="0"    
+                                    TextTransform="Uppercase"
+                                    FontAttributes="Bold"
+                                    Margin="0,2"
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Start" />
+                                <Label   FontSize="13"
+                                         TextColor="#f5f5f4"
+                                         Text="{Binding Iscompleted  }"
+                                         Grid.Row="9" Grid.Column="1"     
+                                         FontAttributes="Bold"
+                                         Margin="0,2"
 VerticalOptions="Center" 
 HorizontalOptions="End" />
                                 <Label 
