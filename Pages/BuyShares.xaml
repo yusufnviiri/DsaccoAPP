@@ -2,7 +2,8 @@
 <mct:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
            xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-           Size="400,340"
+           Size="320,300"
+           CanBeDismissedByTappingOutsideOfPopup="False"
            VerticalOptions="Center"
            HorizontalOptions="Center"
            x:Class="DsaccoAPP.Pages.BuyShares">
@@ -29,34 +30,30 @@
                 <Label Grid.Column="0" Grid.Row="0"
                        Text="Number of Shares"  
                        VerticalOptions="Center" 
-                       WidthRequest="200"               
-                       HorizontalOptions="Center"/>
+                       HorizontalOptions="Start"/>
                 <Label Grid.Column="1" Grid.Row="0"
                        Text="{Binding SharesOwned}"  
                        VerticalOptions="Center" 
-                       WidthRequest="200"               
-                       HorizontalOptions="Center"/>
+                       HorizontalOptions="End"/>
                 <Label Grid.Column="0" Grid.Row="1"
                        Text="Value Of Shares"  
                        VerticalOptions="Center" 
-                       WidthRequest="200"              
-                       HorizontalOptions="Center"/>
+                       HorizontalOptions="Start"/>
                 <Label Grid.Column="1" Grid.Row="1"
                        Text="{Binding SharesValue}"  
                        VerticalOptions="Center" 
-                       WidthRequest="200"               
-                       HorizontalOptions="Center"/>
+                       HorizontalOptions="End"/>
                <Label 
                 Grid.Column="0" Grid.Row="2"
                 Text="Shares to buy"  
-                VerticalOptions="Center" 
-                WidthRequest="200"               
-                HorizontalOptions="Center"/>
+                VerticalOptions="Center"                            
+                HorizontalOptions="Start"/>
             <Entry WidthRequest="100" Grid.Column="1" Grid.Row="2"
                    Text="{Binding SharesQuantity}"
-                   HorizontalOptions="Center"                        
+                   HorizontalOptions="End"                        
                    Placeholder="0"
-                   BackgroundColor="DimGrey"
+                   TextColor="White"
+                   BackgroundColor="Green"
                    VerticalOptions="Center"  
                    Keyboard="Numeric"      />
             </Grid>
