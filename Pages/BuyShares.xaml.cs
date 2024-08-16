@@ -12,7 +12,6 @@ public partial class BuyShares : Popup
     static HttpClient client;
     public BuyShares()
 	{
-		InitializeComponent();
         InitializeComponent();
         client = new HttpClient
         {
