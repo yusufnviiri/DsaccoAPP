@@ -10,7 +10,9 @@ using CommunityToolkit.Maui.Views;
 public partial class Login : ContentPage
 {
     static HttpClient client;
-	private UserDto _userDataInjector { get; set; }
+    static HttpClient clientShares;
+
+    private UserDto _userDataInjector { get; set; }
     string baseUrl = "https://localhost:7231/api/Login/login";
 	string userUrl = "https://localhost:7231/api/Login/user";
     string loanTypeUrl = "https://localhost:7231/api/Loan/loantypes";
@@ -39,7 +41,11 @@ public partial class Login : ContentPage
 		{
 			BaseAddress = new Uri(baseUrl)
 		};
-	}
+        clientShares = new HttpClient
+        {
+            BaseAddress = new Uri(sharesUrl)
+        };
+    }
 	public string Names { get; set; } 
     public string Email
 	{
@@ -91,8 +97,8 @@ public partial class Login : ContentPage
     public async Task<MemberShares> GetMemberShares()
     {
         var response = await client.GetStringAsync(sharesUrl);
-        var res = JsonConvert.DeserializeObject<MemberShares>(response);
-        return res;
+        var res = JsonConvert.DeserializeObject<IEnumerable<MemberShares>>(response);
+        return res.FirstOrDefault();
 
     }
     public async Task<List<Account>> GetMemberAccounts()
@@ -228,7 +234,9 @@ public partial class Login : ContentPage
     }
 
     private async void PurchaseShares(object sender, EventArgs e)
-    {memberShares = await GetMemberShares();
+    {
+        
+        memberShares = await GetMemberShares();
 
         this.ShowPopupAsync(new BuyShares(memberShares));
 
