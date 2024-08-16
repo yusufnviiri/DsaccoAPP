@@ -86,6 +86,9 @@
 	  <MauiXaml Update="Pages\Register.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\SellShares.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\WithdrawDetails.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

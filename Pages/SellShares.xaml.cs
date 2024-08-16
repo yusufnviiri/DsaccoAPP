@@ -6,24 +6,24 @@ using DsaccoAPP.Model.Mapper;
 using Newtonsoft.Json;
 using System.Text;
 
-public partial class BuyShares : Popup
+public partial class SellShares : Popup
 {
     public List<LoanType> LoanTypesList { get; set; } = new List<LoanType>();
-    string sharesUrl = "https://localhost:7231/api/Account/buyshares";
+    string sharesUrl = "https://localhost:7231/api/Account/sellshares";
     SharesDto sharesDto = new SharesDto();
     double sharesQuantity;
     static HttpClient client;
     double sharesOwned;
     decimal shareValue;
-    MemberShares MemberShares { get; set; }= new MemberShares();
-    public BuyShares(MemberShares shares)
+    MemberShares MemberShares { get; set; } = new MemberShares();
+    public SellShares(MemberShares shares)
     {
         InitializeComponent();
         client = new HttpClient
         {
             BaseAddress = new Uri(sharesUrl)
         };
-        MemberShares= shares;
+        MemberShares = shares;
         SharesOwned = shares.NumberOfShares;
         SharesValue = shares.ValueOfShare;
         BindingContext = this;
@@ -38,7 +38,9 @@ public partial class BuyShares : Popup
     }
     public double SharesOwned
     {
-        get { return sharesOwned; } set {
+        get { return sharesOwned; }
+        set
+        {
             sharesOwned = value; OnPropertyChanged();
         }
     }

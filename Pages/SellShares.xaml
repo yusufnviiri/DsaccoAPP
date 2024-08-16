@@ -5,7 +5,8 @@
            Size="400,340"
            VerticalOptions="Center"
            HorizontalOptions="Center"
-           x:Class="DsaccoAPP.Pages.BuyShares">
+             x:Class="DsaccoAPP.Pages.SellShares"
+             Title="SellShares">
     <Border Stroke="{StaticResource Primary}"
       StrokeThickness="3"
       Padding="0"
@@ -46,13 +47,13 @@
                        VerticalOptions="Center" 
                        WidthRequest="200"               
                        HorizontalOptions="Center"/>
-               <Label 
+                <Label 
                 Grid.Column="0" Grid.Row="2"
                 Text="Shares to buy"  
                 VerticalOptions="Center" 
                 WidthRequest="200"               
                 HorizontalOptions="Center"/>
-            <Entry WidthRequest="200" Grid.Column="1" Grid.Row="2"
+                <Entry WidthRequest="200" Grid.Column="1" Grid.Row="2"
                    Text="{Binding SharesQuantity}"
                    HorizontalOptions="Center"                        
                    Placeholder="0"
