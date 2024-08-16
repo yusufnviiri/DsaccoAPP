@@ -51,7 +51,7 @@ public partial class SellShares : Popup
     }
 
 
-    private async void PuchaseShares(object sender, EventArgs e)
+    private async void SellMemberShares(object sender, EventArgs e)
     {
         SharesDto shares = new() { SharesQuantity = SharesQuantity };
         var json = JsonConvert.SerializeObject(shares);
@@ -76,4 +76,5 @@ public partial class SellShares : Popup
         Close();
 
     }
+   
 }

@@ -52,12 +52,12 @@
                 VerticalOptions="Center" 
                 WidthRequest="200"               
                 HorizontalOptions="Center"/>
-            <Entry WidthRequest="200" Grid.Column="1" Grid.Row="2"
+            <Entry WidthRequest="100" Grid.Column="1" Grid.Row="2"
                    Text="{Binding SharesQuantity}"
                    HorizontalOptions="Center"                        
                    Placeholder="0"
                    BackgroundColor="DimGrey"
-                   VerticalOptions="CenterAndExpand"  
+                   VerticalOptions="Center"  
                    Keyboard="Numeric"      />
             </Grid>
             <Grid VerticalOptions="EndAndExpand" ColumnDefinitions="2*,*"  Margin="10,15">

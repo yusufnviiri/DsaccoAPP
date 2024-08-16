@@ -244,7 +244,8 @@ public partial class Login : ContentPage
 
     private async void SellMemberShares(object sender, EventArgs e)
     {
-        this.ShowPopupAsync(new BuyShares(memberShares));
+        memberShares = await GetMemberShares();
+        this.ShowPopupAsync(new SellShares(memberShares));
 
     }
 
