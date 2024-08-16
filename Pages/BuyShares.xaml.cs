@@ -13,14 +13,34 @@ public partial class BuyShares : Popup
     SharesDto sharesDto = new SharesDto();
     double sharesQuantity;
     static HttpClient client;
-    public BuyShares()
+    double sharesOwned;
+    decimal shareValue;
+    MemberShares MemberShares { get; set; }= new MemberShares();
+    public BuyShares(MemberShares shares)
     {
         InitializeComponent();
         client = new HttpClient
         {
             BaseAddress = new Uri(loanUrl)
         };
+        MemberShares= shares;
+        SharesOwned = shares.NumberOfShares;
+        SharesValue = shares.ValueOfShare;
         BindingContext = this;
+    }
+    public decimal SharesValue
+    {
+        get { return shareValue; }
+        set
+        {
+            shareValue = value; OnPropertyChanged();
+        }
+    }
+    public double SharesOwned
+    {
+        get { return sharesOwned; } set {
+            sharesOwned = value; OnPropertyChanged();
+        }
     }
     public double SharesQuantity
     {

@@ -15,6 +15,8 @@ public partial class Login : ContentPage
 	string userUrl = "https://localhost:7231/api/Login/user";
     string loanTypeUrl = "https://localhost:7231/api/Loan/loantypes";
     string accountUrl = "https://localhost:7231/api/Account/accounts";
+    string sharesUrl = "https://localhost:7231/api/Account/membershares";
+    MemberShares memberShares { get; set; } = new MemberShares();
 
 
     string email;
@@ -86,6 +88,13 @@ public partial class Login : ContentPage
 		return res;
 
 	}
+    public async Task<MemberShares> GetMemberShares()
+    {
+        var response = await client.GetStringAsync(sharesUrl);
+        var res = JsonConvert.DeserializeObject<MemberShares>(response);
+        return res;
+
+    }
     public async Task<List<Account>> GetMemberAccounts()
     {
         var response = await client.GetStringAsync(accountUrl);
@@ -218,13 +227,16 @@ public partial class Login : ContentPage
         }
     }
 
-    private void PurchaseShares(object sender, EventArgs e)
-    {
+    private async void PurchaseShares(object sender, EventArgs e)
+    {memberShares = await GetMemberShares();
+
+        this.ShowPopupAsync(new BuyShares(memberShares));
 
     }
 
-    private void SellMemberShares(object sender, EventArgs e)
+    private async void SellMemberShares(object sender, EventArgs e)
     {
+        this.ShowPopupAsync(new BuyShares());
 
     }
 
