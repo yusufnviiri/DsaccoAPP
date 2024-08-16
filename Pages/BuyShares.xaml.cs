@@ -54,7 +54,7 @@ public partial class BuyShares : Popup
         SharesDto shares = new() { SharesQuantity = SharesQuantity };
         var json = JsonConvert.SerializeObject(shares);
         var postData = new StringContent(json, Encoding.UTF8, "application/json");
-        var res = await client.PostAsync(loanUrl, postData);
+        var res = await client.PostAsync(sharesUrl, postData);
         if (!res.IsSuccessStatusCode)
         {
             var route = $"{nameof(Login)}";
