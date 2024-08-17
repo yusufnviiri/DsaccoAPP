@@ -6,6 +6,7 @@ using DsaccoAPP.Model;
 using Newtonsoft.Json;
 using System.Text;
 using CommunityToolkit.Maui.Views;
+using System.Data;
 
 public partial class Login : ContentPage
 {
@@ -252,6 +253,12 @@ public partial class Login : ContentPage
     private void GetMemberLoans(object sender, EventArgs e)
     {
         this.ShowPopupAsync(new MemberLoans());
+
+    }
+
+    private async void AllLoansInDb(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(AllLoans));
 
     }
 }

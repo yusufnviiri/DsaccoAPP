@@ -131,7 +131,7 @@
                        VerticalOptions="CenterAndExpand"  />
 
                 <Label   Grid.Column="0" Grid.Row="10"
-                         Text=" Installlements"  
+                         Text=" Installements"  
                          VerticalOptions="Center" 
                          HorizontalOptions="Start"/>
                 <Entry WidthRequest="200"

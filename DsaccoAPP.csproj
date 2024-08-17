@@ -56,6 +56,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Model\backup.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\AccountData.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

@@ -87,6 +87,11 @@ HorizontalOptions="Center"
 WidthRequest="150"
 VerticalOptions="Center"
 Clicked="GetMemberLoans"/>
+            <Button Text="All Loans"
+HorizontalOptions="Center"       
+WidthRequest="150"
+VerticalOptions="Center"
+Clicked="AllLoansInDb"/>
         </FlexLayout>
     </ScrollView>
 </ContentPage>

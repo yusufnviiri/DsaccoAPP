@@ -4,7 +4,8 @@
              x:Class="DsaccoAPP.Pages.AllLoans"
              Title="All Loans">
     <ScrollView>
-        <VerticalStackLayout BackgroundColor="#022c22" Padding="10"  >
+
+            <VerticalStackLayout BackgroundColor="#022c22" Padding="10"  >
             <Label 
         Text="Loans"
         TextTransform="Uppercase"
@@ -14,17 +15,353 @@
         VerticalOptions="Center"              
         HorizontalOptions="Center" />
 
-            <Grid VerticalOptions="EndAndExpand"  ColumnDefinitions="2*,*" ColumnSpacing="5" Margin="5" >
-                <Button Grid.Column="0" Text="REFRESH" FontAttributes="Bold" CharacterSpacing="3" BackgroundColor="#1d4ed8"
-    Clicked="GetMemberLoans"/>
-                <Button Grid.Column="1" Text="CLOSE" FontAttributes="Bold" CharacterSpacing="3"
+                <Grid VerticalOptions="EndAndExpand"  ColumnDefinitions="2*,*" ColumnSpacing="5" Margin="5" >
+                    <Button Grid.Column="0" Text="REFRESH" FontAttributes="Bold" CharacterSpacing="3" BackgroundColor="#1d4ed8"
+    Clicked="GetallLoans"/>
+                    <Button Grid.Column="1" Text="CLOSE" FontAttributes="Bold" CharacterSpacing="3"
     BackgroundColor="red"
-    Clicked="closepopup"/>
-            </Grid>
-            <CollectionView x:Name="loanDetailsView" >
+    Clicked="BackToHome"/>
+                </Grid>
+                <FlexLayout x:Name="flexView"
+                    Direction="Row"
+                    Wrap="Wrap"
+                    AlignItems="Start"
+                    JustifyContent="SpaceEvenly"  BindableLayout.ItemsSource="{Binding LoansBindableList}"
+                    Padding="10">
 
-                <CollectionView.ItemTemplate>
+
+                    <BindableLayout.ItemTemplate>
+
                     <DataTemplate>
+                        <Border Stroke="{StaticResource Yellow100Accent}"
+                 StrokeThickness="3"
+                 Padding="10"
+                 Margin="10">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10"/>
+                            </Border.StrokeShape>
+                            <VerticalStackLayout MinimumWidthRequest="350">
+                                <Label 
+   Text="loan Category"
+   FontAttributes="Bold"
+   FontSize="11"
+   TextColor="#f5f5f4"
+   VerticalOptions="Center" 
+   HorizontalOptions="Start" />
+                                <Label 
+   Text="{Binding LoanType.Description }"
+   FontAttributes="Bold"
+   FontSize="11"
+   TextColor="#F7B548"                                
+   VerticalOptions="Center" 
+   HorizontalOptions="End" />
+                                <!--</HorizontalStackLayout>-->
+                                <Label 
+   Text="Amount Applied"
+   FontAttributes="Bold"
+   VerticalOptions="Center" 
+   FontSize="11"
+   TextColor="#f5f5f4"
+   HorizontalOptions="Start" />
+                                <Label
+   
+   Text="{Binding   PrincipleAmount}"
+   FontAttributes="Bold"
+   VerticalOptions="Center" 
+   FontSize="11"
+   TextColor="#F7B548"
+   HorizontalOptions="End" />
+
+
+
+                                <Label 
+Text="Loan Period"
+FontAttributes="Bold"
+   FontSize="11"
+
+TextColor="#f5f5f4"
+VerticalOptions="Center" 
+HorizontalOptions="Start" />
+                                <Label 
+   FontSize="11"
+
+   TextColor="#F7B548"                                
+Text="{Binding LoanPeriod }"
+FontAttributes="Bold"
+VerticalOptions="Center" 
+HorizontalOptions="End" />
+                                <Label 
+   FontSize="11"
+
+TextColor="#f5f5f4"
+Text="Current Payments"
+TextTransform="Uppercase"
+FontAttributes="Bold"
+VerticalOptions="Center" 
+HorizontalOptions="Start" />
+                                <Label  
+FontSize="11"
+   TextColor="#F7B548"                                
+Text="{Binding NumberOfPayments  }"
+FontAttributes="Bold"
+VerticalOptions="Center" 
+HorizontalOptions="End" />
+                                <Label   
+     TextColor="#f5f5f4"
+     Text="Pay Amount"   FontSize="11"
+
+     FontAttributes="Bold"
+     VerticalOptions="Center" 
+     HorizontalOptions="Start" />
+                                <Label   
+   FontSize="11"
+
+   TextColor="#F7B548"                                
+Text="{Binding PayAmount  }"
+FontAttributes="Bold"
+VerticalOptions="Center" 
+HorizontalOptions="End" />
+                                <Label   FontSize="11"
+     TextColor="#f5f5f4"
+     Text="Outstanding Balance"
+     FontAttributes="Bold"
+
+     VerticalOptions="Center" 
+     HorizontalOptions="Start" />
+                                <Label 
+   FontSize="11"
+   TextColor="#F7B548"                                
+Text="{Binding OutstandingBalance}"
+FontAttributes="Bold"
+
+VerticalOptions="Center" 
+HorizontalOptions="End" />
+                                <Label      FontSize="11"
+
+     TextColor="#f5f5f4"
+     Text="Loan Interest"
+     TextTransform="Uppercase"
+     FontAttributes="Bold"
+
+     VerticalOptions="Center" 
+     HorizontalOptions="Start" />
+                                <Label 
+   FontSize="11"
+
+   TextColor="#F7B548"                                
+Text="{Binding LoanInterest }"
+FontAttributes="Bold"
+
+VerticalOptions="Center" 
+HorizontalOptions="End" />
+                                <Label     FontSize="11"
+
+     TextColor="#f5f5f4"
+     Text="Status"
+     FontAttributes="Bold"
+ 
+     VerticalOptions="Center" 
+     HorizontalOptions="Start" />
+                                <Label 
+   FontSize="11"
+
+   TextColor="#F7B548"                                
+Text="{Binding Status }"
+FontAttributes="Bold"
+
+VerticalOptions="Center" 
+HorizontalOptions="End" />
+                                <Label 
+Text="Installments"
+FontAttributes="Bold"
+   FontSize="11"
+
+TextColor="#f5f5f4"
+VerticalOptions="Center" 
+HorizontalOptions="Start" />
+                                <Label      FontSize="11"
+
+   TextColor="#F7B548"                                
+     Text="{Binding NumberOfInstallments }"
+     FontAttributes="Bold"
+  
+     VerticalOptions="Center" 
+     HorizontalOptions="End" />
+                                <Label  
+   FontSize="11"
+
+TextColor="#f5f5f4"
+Text="Completed?"
+TextTransform="Uppercase"
+FontAttributes="Bold"
+
+VerticalOptions="Center" 
+HorizontalOptions="Start" />
+                                <Label      FontSize="11"
+
+   TextColor="#F7B548"                                
+     Text="{Binding loanCompletiton  }"
+     FontAttributes="Bold"
+
+     VerticalOptions="Center" 
+     HorizontalOptions="End" />
+                                <Label  
+   FontSize="11"
+
+TextColor="#f5f5f4"
+Text="Security"
+FontAttributes="Bold"
+
+VerticalOptions="Center" 
+HorizontalOptions="Start" />
+                                <Label      FontSize="11"
+
+   TextColor="#F7B548"                                
+      Text="{Binding Security }"
+      FontAttributes="Bold"
+    
+      VerticalOptions="Center" 
+      HorizontalOptions="End" />
+                                <Label  
+   FontSize="11"
+
+TextColor="#f5f5f4"
+Text="First Witness Name"
+FontAttributes="Bold"
+
+VerticalOptions="Center" 
+HorizontalOptions="Start" />
+                                <Label      FontSize="11"
+
+   TextColor="#F7B548"                                
+     Text="{Binding  LoanWitness.FirstWitnessName }"
+     FontAttributes="Bold"
+
+     VerticalOptions="Center" 
+     HorizontalOptions="End" />
+                                <Label 
+   FontSize="11"
+
+TextColor="#f5f5f4"
+Text="First Witness Address"
+FontAttributes="Bold"
+
+VerticalOptions="Center" 
+HorizontalOptions="Start" />
+                                <Label      FontSize="11"
+
+   TextColor="#F7B548"                                
+     Text="{Binding  LoanWitness.FirstWitnessAddress }"
+     FontAttributes="Bold"
+
+     VerticalOptions="Center" 
+     HorizontalOptions="End" />
+                                <Label  
+   FontSize="11"
+
+TextColor="#f5f5f4"
+Text="First Witness Contact"
+FontAttributes="Bold"
+
+VerticalOptions="Center" 
+HorizontalOptions="Start" />
+                                <Label      FontSize="11"
+
+   TextColor="#F7B548"                                
+     Text="{Binding  LoanWitness.FirstWitnessContact }"
+     FontAttributes="Bold"
+
+     VerticalOptions="Center" 
+     HorizontalOptions="End" />
+                                <Label  
+   FontSize="11"
+
+TextColor="#f5f5f4"
+Text="Second Witness Name"
+FontAttributes="Bold"
+
+VerticalOptions="Center" 
+HorizontalOptions="Start" />
+                                <Label      FontSize="11"
+
+   TextColor="#F7B548"                                
+     Text="{Binding  LoanWitness.SecondWitnessName }"
+     FontAttributes="Bold"
+  
+     VerticalOptions="Center" 
+     HorizontalOptions="End" />
+                                <Label   
+   FontSize="11"
+
+TextColor="#f5f5f4"
+Text="Second Witness Address"
+FontAttributes="Bold"
+
+VerticalOptions="Center" 
+HorizontalOptions="Start" />
+                                <Label      FontSize="11"
+
+   TextColor="#F7B548"                                
+     Text="{Binding  LoanWitness.SecondWitnessAddress}"
+     FontAttributes="Bold"
+    
+     VerticalOptions="Center" 
+     HorizontalOptions="End" />
+                                <Label  
+   FontSize="11"
+
+TextColor="#f5f5f4"
+Text="Second Witness Contact"
+FontAttributes="Bold"
+
+VerticalOptions="Center" 
+HorizontalOptions="Start" />
+                                <Label  
+   FontSize="11"
+
+   TextColor="#F7B548"                                
+Text="{Binding  LoanWitness.SecondWitnessContact }"
+FontAttributes="Bold"
+
+VerticalOptions="Center" 
+HorizontalOptions="End" />
+
+                            </VerticalStackLayout>
+
+                        </Border>
+                    </DataTemplate>
+
+
+                </BindableLayout.ItemTemplate>
+
+
+            </FlexLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!--<CollectionView x:Name="loanDetailsView" >
+
+
+                    <CollectionView.ItemTemplate>
+
+                        <DataTemplate>
                         <Border Stroke="{StaticResource Yellow100Accent}"
                         StrokeThickness="3"
                         Padding="10,5"
@@ -32,7 +369,8 @@
                             <Border.StrokeShape>
                                 <RoundRectangle CornerRadius="10"/>
                             </Border.StrokeShape>
-                            <Grid RowDefinitions="*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*" RowSpacing="5" ColumnSpacing="6" ColumnDefinitions="2*,*">
+                            --><!--<FlexLayout  JustifyContent="SpaceEvenly" AlignContent="SpaceAround" Wrap="Wrap">--><!--
+                                <Grid RowDefinitions="*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*" RowSpacing="5" ColumnSpacing="6" ColumnDefinitions="2*,*">
                                 <Label 
                                  Text="loan Category"
                                  Grid.Row="0" Grid.Column="0"     
@@ -332,14 +670,19 @@
                                  VerticalOptions="Center" 
                                  HorizontalOptions="End" />
                             </Grid>
+                                --><!--</FlexLayout>--><!--
                         </Border>
                     </DataTemplate>
+                        
+                        
                 </CollectionView.ItemTemplate>
+                
+            </CollectionView>-->
 
-            </CollectionView>
 
 
+            </VerticalStackLayout>
+      
 
-        </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

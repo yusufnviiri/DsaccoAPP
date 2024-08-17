@@ -14,6 +14,7 @@ namespace DsaccoAPP.Model.BaseClasses
         public decimal OutstandingBalance { get; set; }
         public double LoanInterest { get; set; }
         public string Status { get; set; }
+        public string loanCompletiton { get; set; } = "false";
         public bool IsCompleted { get; set; } = false;
         public decimal PrincipleAmount { get; set; } = 0M;
         public string Security { get; set; } = "Salary";

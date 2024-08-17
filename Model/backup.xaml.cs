@@ -1,4 +1,4 @@
-namespace DsaccoAPP.Pages;
+namespace DsaccoAPP.Model;
 using CommunityToolkit.Maui.Views;
 using System.Collections.ObjectModel;
 using DsaccoAPP.Model.BaseClasses;
@@ -6,22 +6,16 @@ using DsaccoAPP.Model.Mapper;
 using Newtonsoft.Json;
 using System.Text;
 
-public partial class AllLoans : ContentPage
+public partial class backup : ContentPage
 {
     string loanUrl = "https://localhost:7231/api/Loan/allloans";
     static HttpClient client;
-    public ObservableCollection<Loan> LoansBindableList { get; set; }= new ObservableCollection<Loan>();
-    private IEnumerable<Loan> loansfromDb {  get; set; }= new List<Loan>();
-
-    public AllLoans()
-    {
+    public ObservableCollection<Loan> LoansBindableList { get; set; } = new ObservableCollection<Loan>();
+    private IEnumerable<Loan> loansfromDb { get; set; } = new List<Loan>();
+    public backup()
+	{
 		InitializeComponent();
-        client = new HttpClient
-        {
-            BaseAddress = new Uri(loanUrl)
-        };
-        BindingContext = this;
-    }
+	}
     protected override async void OnAppearing()
     {
         base.OnAppearing();
@@ -30,19 +24,9 @@ public partial class AllLoans : ContentPage
         loansfromDb = res;
         foreach (var item in loansfromDb)
         {
-            if (item.IsCompleted)
-            {
-                item.loanCompletiton = "True";
-            }
-            else
-            {
-                item.loanCompletiton = "False";
-
-            }
             LoansBindableList.Add(item);
 
 
-        
             //var frame = new Frame
             //{
             //    BorderColor = Colors.Gray,
@@ -52,7 +36,7 @@ public partial class AllLoans : ContentPage
             //};
             //flexView.Children.Add(frame);
         }
-  
+
 
     }
 
