@@ -2,10 +2,13 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DsaccoAPP.Pages.Login"
+             HeightRequest="500"
+             MaximumWidthRequest="600" Padding="10,5"
              Title="Login">
-    <ScrollView>
-    <VerticalStackLayout>
-        <Label 
+    <ScrollView >
+        <FlexLayout  JustifyContent="SpaceEvenly" AlignContent="SpaceAround"
+Wrap="Wrap">
+                <Label 
             Text="Login Page"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
@@ -26,7 +29,10 @@
                VerticalOptions="Center"
                IsPassword="True"
                Text="{Binding Password}"/>
-        <Button Text="Submit"
+
+
+
+            <Button Text="Submit"
                 HorizontalOptions="Center"         
                 WidthRequest="150"
                 VerticalOptions="Center"
@@ -81,6 +87,6 @@ HorizontalOptions="Center"
 WidthRequest="150"
 VerticalOptions="Center"
 Clicked="GetMemberLoans"/>
-    </VerticalStackLayout>
+        </FlexLayout>
     </ScrollView>
 </ContentPage>
