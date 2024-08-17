@@ -20,11 +20,19 @@ public partial class AllLoans : ContentPage
         {
             BaseAddress = new Uri(loanUrl)
         };
-      
+      loanDetailsView.ItemsSource = LoansBindableList;
         BindingContext = this;
     }
     protected override async void OnAppearing()
     {
         base.OnAppearing();
+        var response = await client.GetStringAsync(loanUrl);
+        var res = JsonConvert.DeserializeObject<IEnumerable<Loan>>(response);
+        loansfromDb = res;
+        foreach(var item in loansfromDb)
+        {
+            LoansBindableList.Add(item);
+        }
+
     }
 }
