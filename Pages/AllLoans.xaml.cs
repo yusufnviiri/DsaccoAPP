@@ -80,7 +80,7 @@ public partial class AllLoans : ContentPage
         var selectedItem = button.BindingContext as Loan;
         if (selectedItem != null)
         {
-            DisplayAlert("Item Selected", selectedItem.LoanType.Description, "OK");
+            DisplayAlert("Item Selected", selectedItem.LoanType.Description + " "+ selectedItem.LoanId, "OK");
         }
     }
     private void OnRejectLoan(object sender, EventArgs e)
@@ -89,7 +89,7 @@ public partial class AllLoans : ContentPage
         var selectedItem = button.BindingContext as Loan;
         if (selectedItem != null)
         {
-            DisplayAlert("Item Selected", selectedItem.User.LastName, "OK");
+            DisplayAlert("Item Selected", selectedItem.User.LastName + " " + selectedItem.User.FirstName, "OK");
         }
     }
 }
