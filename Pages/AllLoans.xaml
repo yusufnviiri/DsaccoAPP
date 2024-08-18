@@ -27,7 +27,7 @@
                     Wrap="Wrap"
                     AlignItems="Start"
                     JustifyContent="SpaceEvenly"  BindableLayout.ItemsSource="{Binding LoansBindableList}"
-                    Padding="10">
+                    Padding="30">
 
 
                     <BindableLayout.ItemTemplate>
@@ -38,29 +38,36 @@
                  Padding="10"
                  Margin="10">
                             <Border.StrokeShape>
-                                <RoundRectangle CornerRadius="10"/>
+                                <RoundRectangle CornerRadius="5"/>
                             </Border.StrokeShape>
                             <VerticalStackLayout MinimumWidthRequest="350">
+                                <HorizontalStackLayout>
                                 <Label 
-   Text="loan Category"
-   FontAttributes="Bold"
-   FontSize="11"
+                                    Text="Loan Category"
+                                    FontAttributes="Bold"
+                                    FontSize="12"
+                                    MinimumWidthRequest="200"
+
    TextColor="#f5f5f4"
    VerticalOptions="Center" 
    HorizontalOptions="Start" />
                                 <Label 
    Text="{Binding LoanType.Description }"
    FontAttributes="Bold"
-   FontSize="11"
+   FontSize="12"
    TextColor="#F7B548"                                
    VerticalOptions="Center" 
    HorizontalOptions="End" />
-                                <!--</HorizontalStackLayout>-->
-                                <Label 
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout>
+
+                                    <Label                                      MinimumWidthRequest="200"
+
+
    Text="Amount Applied"
    FontAttributes="Bold"
    VerticalOptions="Center" 
-   FontSize="11"
+   FontSize="12"
    TextColor="#f5f5f4"
    HorizontalOptions="Start" />
                                 <Label
@@ -68,30 +75,38 @@
    Text="{Binding   PrincipleAmount}"
    FontAttributes="Bold"
    VerticalOptions="Center" 
-   FontSize="11"
+   FontSize="12"
    TextColor="#F7B548"
    HorizontalOptions="End" />
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout>
 
 
 
-                                <Label 
+                                    <Label                                      MinimumWidthRequest="200"
+
+
 Text="Loan Period"
 FontAttributes="Bold"
-   FontSize="11"
+   FontSize="12"
 
 TextColor="#f5f5f4"
 VerticalOptions="Center" 
 HorizontalOptions="Start" />
                                 <Label 
-   FontSize="11"
+   FontSize="12"
 
    TextColor="#F7B548"                                
 Text="{Binding LoanPeriod }"
 FontAttributes="Bold"
 VerticalOptions="Center" 
 HorizontalOptions="End" />
-                                <Label 
-   FontSize="11"
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout>
+
+                                    <Label 
+ FontSize="12"
+ MinimumWidthRequest="200"
 
 TextColor="#f5f5f4"
 Text="Current Payments"
@@ -100,28 +115,36 @@ FontAttributes="Bold"
 VerticalOptions="Center" 
 HorizontalOptions="Start" />
                                 <Label  
-FontSize="11"
+FontSize="12"
    TextColor="#F7B548"                                
 Text="{Binding NumberOfPayments  }"
 FontAttributes="Bold"
 VerticalOptions="Center" 
 HorizontalOptions="End" />
-                                <Label   
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout>
+
+                                    <Label   
      TextColor="#f5f5f4"
-     Text="Pay Amount"   FontSize="11"
+     Text="Pay Amount"    FontSize="12"
+ MinimumWidthRequest="200"
 
      FontAttributes="Bold"
      VerticalOptions="Center" 
      HorizontalOptions="Start" />
                                 <Label   
-   FontSize="11"
+   FontSize="12"
 
    TextColor="#F7B548"                                
 Text="{Binding PayAmount  }"
 FontAttributes="Bold"
 VerticalOptions="Center" 
 HorizontalOptions="End" />
-                                <Label   FontSize="11"
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout  >
+
+                                    <Label    FontSize="12"
+ MinimumWidthRequest="200"
      TextColor="#f5f5f4"
      Text="Outstanding Balance"
      FontAttributes="Bold"
@@ -129,14 +152,18 @@ HorizontalOptions="End" />
      VerticalOptions="Center" 
      HorizontalOptions="Start" />
                                 <Label 
-   FontSize="11"
+   FontSize="12"
    TextColor="#F7B548"                                
 Text="{Binding OutstandingBalance}"
 FontAttributes="Bold"
 
 VerticalOptions="Center" 
 HorizontalOptions="End" />
-                                <Label      FontSize="11"
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout>
+
+                                    <Label       FontSize="12"
+ MinimumWidthRequest="200"
 
      TextColor="#f5f5f4"
      Text="Loan Interest"
@@ -146,7 +173,7 @@ HorizontalOptions="End" />
      VerticalOptions="Center" 
      HorizontalOptions="Start" />
                                 <Label 
-   FontSize="11"
+   FontSize="12"
 
    TextColor="#F7B548"                                
 Text="{Binding LoanInterest }"
@@ -154,7 +181,11 @@ FontAttributes="Bold"
 
 VerticalOptions="Center" 
 HorizontalOptions="End" />
-                                <Label     FontSize="11"
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout  >
+
+                                    <Label      FontSize="12"
+ MinimumWidthRequest="200"
 
      TextColor="#f5f5f4"
      Text="Status"
@@ -163,7 +194,7 @@ HorizontalOptions="End" />
      VerticalOptions="Center" 
      HorizontalOptions="Start" />
                                 <Label 
-   FontSize="11"
+   FontSize="12"
 
    TextColor="#F7B548"                                
 Text="{Binding Status }"
@@ -171,15 +202,19 @@ FontAttributes="Bold"
 
 VerticalOptions="Center" 
 HorizontalOptions="End" />
-                                <Label 
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout>
+
+                                    <Label 
 Text="Installments"
 FontAttributes="Bold"
-   FontSize="11"
+   FontSize="12"
+ MinimumWidthRequest="200"
 
 TextColor="#f5f5f4"
 VerticalOptions="Center" 
 HorizontalOptions="Start" />
-                                <Label      FontSize="11"
+                                <Label      FontSize="12"
 
    TextColor="#F7B548"                                
      Text="{Binding NumberOfInstallments }"
@@ -187,8 +222,12 @@ HorizontalOptions="Start" />
   
      VerticalOptions="Center" 
      HorizontalOptions="End" />
-                                <Label  
-   FontSize="11"
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout>
+
+                                    <Label  
+    FontSize="12"
+ MinimumWidthRequest="200"
 
 TextColor="#f5f5f4"
 Text="Completed?"
@@ -197,16 +236,19 @@ FontAttributes="Bold"
 
 VerticalOptions="Center" 
 HorizontalOptions="Start" />
-                                <Label      FontSize="11"
+                                <Label      FontSize="12"
 
    TextColor="#F7B548"                                
      Text="{Binding loanCompletiton  }"
      FontAttributes="Bold"
-
      VerticalOptions="Center" 
      HorizontalOptions="End" />
-                                <Label  
-   FontSize="11"
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout>
+
+                                    <Label  
+   FontSize="12"
+ MinimumWidthRequest="200"
 
 TextColor="#f5f5f4"
 Text="Security"
@@ -214,7 +256,7 @@ FontAttributes="Bold"
 
 VerticalOptions="Center" 
 HorizontalOptions="Start" />
-                                <Label      FontSize="11"
+                                <Label      FontSize="12"
 
    TextColor="#F7B548"                                
       Text="{Binding Security }"
@@ -222,8 +264,12 @@ HorizontalOptions="Start" />
     
       VerticalOptions="Center" 
       HorizontalOptions="End" />
-                                <Label  
-   FontSize="11"
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout>
+
+                                    <Label  
+  FontSize="12"
+ MinimumWidthRequest="200"
 
 TextColor="#f5f5f4"
 Text="First Witness Name"
@@ -231,7 +277,7 @@ FontAttributes="Bold"
 
 VerticalOptions="Center" 
 HorizontalOptions="Start" />
-                                <Label      FontSize="11"
+                                <Label      FontSize="12"
 
    TextColor="#F7B548"                                
      Text="{Binding  LoanWitness.FirstWitnessName }"
@@ -239,8 +285,12 @@ HorizontalOptions="Start" />
 
      VerticalOptions="Center" 
      HorizontalOptions="End" />
-                                <Label 
-   FontSize="11"
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout>
+
+                                    <Label 
+   FontSize="12"
+ MinimumWidthRequest="200"
 
 TextColor="#f5f5f4"
 Text="First Witness Address"
@@ -248,7 +298,7 @@ FontAttributes="Bold"
 
 VerticalOptions="Center" 
 HorizontalOptions="Start" />
-                                <Label      FontSize="11"
+                                <Label      FontSize="12"
 
    TextColor="#F7B548"                                
      Text="{Binding  LoanWitness.FirstWitnessAddress }"
@@ -256,8 +306,12 @@ HorizontalOptions="Start" />
 
      VerticalOptions="Center" 
      HorizontalOptions="End" />
-                                <Label  
-   FontSize="11"
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout>
+
+                                    <Label  
+   FontSize="12"
+ MinimumWidthRequest="200"
 
 TextColor="#f5f5f4"
 Text="First Witness Contact"
@@ -265,7 +319,7 @@ FontAttributes="Bold"
 
 VerticalOptions="Center" 
 HorizontalOptions="Start" />
-                                <Label      FontSize="11"
+                                <Label      FontSize="12"
 
    TextColor="#F7B548"                                
      Text="{Binding  LoanWitness.FirstWitnessContact }"
@@ -273,8 +327,12 @@ HorizontalOptions="Start" />
 
      VerticalOptions="Center" 
      HorizontalOptions="End" />
-                                <Label  
-   FontSize="11"
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout>
+
+                                    <Label  
+   FontSize="12"
+ MinimumWidthRequest="200"
 
 TextColor="#f5f5f4"
 Text="Second Witness Name"
@@ -282,7 +340,7 @@ FontAttributes="Bold"
 
 VerticalOptions="Center" 
 HorizontalOptions="Start" />
-                                <Label      FontSize="11"
+                                <Label      FontSize="12"
 
    TextColor="#F7B548"                                
      Text="{Binding  LoanWitness.SecondWitnessName }"
@@ -290,8 +348,12 @@ HorizontalOptions="Start" />
   
      VerticalOptions="Center" 
      HorizontalOptions="End" />
-                                <Label   
-   FontSize="11"
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout>
+
+                                    <Label   
+   FontSize="12"
+ MinimumWidthRequest="200"
 
 TextColor="#f5f5f4"
 Text="Second Witness Address"
@@ -299,7 +361,7 @@ FontAttributes="Bold"
 
 VerticalOptions="Center" 
 HorizontalOptions="Start" />
-                                <Label      FontSize="11"
+                                <Label      FontSize="12"
 
    TextColor="#F7B548"                                
      Text="{Binding  LoanWitness.SecondWitnessAddress}"
@@ -307,8 +369,12 @@ HorizontalOptions="Start" />
     
      VerticalOptions="Center" 
      HorizontalOptions="End" />
-                                <Label  
-   FontSize="11"
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout  >
+
+                                    <Label  
+   FontSize="12"
+ MinimumWidthRequest="200"
 
 TextColor="#f5f5f4"
 Text="Second Witness Contact"
@@ -317,14 +383,15 @@ FontAttributes="Bold"
 VerticalOptions="Center" 
 HorizontalOptions="Start" />
                                 <Label  
-   FontSize="11"
+   FontSize="12"
 
    TextColor="#F7B548"                                
 Text="{Binding  LoanWitness.SecondWitnessContact }"
 FontAttributes="Bold"
-
+HorizontalTextAlignment="End"
 VerticalOptions="Center" 
 HorizontalOptions="End" />
+                                </HorizontalStackLayout>
 
                             </VerticalStackLayout>
 
