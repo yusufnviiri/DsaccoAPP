@@ -73,4 +73,23 @@ public partial class AllLoans : ContentPage
         await Shell.Current.GoToAsync("..");
 
     }
+
+    private void OnApproveLoan(object sender, EventArgs e)
+    {
+        var button = sender as Button;
+        var selectedItem = button.BindingContext as Loan;
+        if (selectedItem != null)
+        {
+            DisplayAlert("Item Selected", selectedItem.LoanType.Description, "OK");
+        }
+    }
+    private void OnRejectLoan(object sender, EventArgs e)
+    {
+        var button = sender as Button;
+        var selectedItem = button.BindingContext as Loan;
+        if (selectedItem != null)
+        {
+            DisplayAlert("Item Selected", selectedItem.User.LastName, "OK");
+        }
+    }
 }

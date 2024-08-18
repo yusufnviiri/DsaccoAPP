@@ -392,6 +392,19 @@ HorizontalTextAlignment="End"
 VerticalOptions="Center" 
 HorizontalOptions="End" />
                                 </HorizontalStackLayout>
+                                <HorizontalStackLayout Spacing="40" >
+
+                                    <Button Text="Approve"   MinimumWidthRequest="100"
+
+         BackgroundColor="Green"
+         FontSize="15"
+         Clicked="OnApproveLoan"/>
+                                    <Button Text="Reject"   MinimumWidthRequest="100"
+
+BackgroundColor="red"
+FontSize="15"
+Clicked="OnRejectLoan"/>
+                                </HorizontalStackLayout>
 
                             </VerticalStackLayout>
 
