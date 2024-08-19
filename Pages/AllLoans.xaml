@@ -169,38 +169,16 @@
                                        Text="{Binding  LoanWitness.SecondWitnessContact }" FontAttributes="Bold"
                                        HorizontalTextAlignment="End" VerticalOptions="Center" HorizontalOptions="End" />
                                 </HorizontalStackLayout>
-
-
-
-
-                                    <Grid VerticalOptions="EndAndExpand"  ColumnDefinitions="*,*,*" ColumnSpacing="5" Margin="5" >
-                                        <Button Grid.Column="0" Text="Refresh"   BackgroundColor="#1d4ed8"
-Clicked="GetallLoans"/>
-                                        
-                                   
-
-                                    <Button Text="Approve" Grid.Column="1" 
-
-         BackgroundColor="Green"
-     
-         Clicked="OnApproveLoan"/>
-                                    <Button Text="Reject" Grid.Column="2" 
-
-BackgroundColor="red"
-
-Clicked="OnRejectLoan"/>
+                                
+    <Grid VerticalOptions="EndAndExpand"  ColumnDefinitions="*,*,*" ColumnSpacing="5" Margin="5" >
+          <Button Grid.Column="0" Text="Refresh"   BackgroundColor="#1d4ed8" Clicked="GetallLoans"/>
+          <Button Text="Approve" Grid.Column="1"  BackgroundColor="Green"            Clicked="OnApproveLoan"/>   
+        <Button Text="Reject" Grid.Column="2" BackgroundColor="red" Clicked="OnRejectLoan"/>
                                 </Grid>
-
-
                             </VerticalStackLayout>
-
                         </Border>
                     </DataTemplate>
-
-
                 </BindableLayout.ItemTemplate>
-
-
             </FlexLayout>
 
 
