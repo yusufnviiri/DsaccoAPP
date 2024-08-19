@@ -6,6 +6,8 @@ using Newtonsoft.Json;
 using System.Collections.ObjectModel;
 using System.Text;
 using DsaccoAPP.Model.Mapper;
+using DsaccoAPP.Model;
+
 
 public partial class MemberLoans : Popup
 {
@@ -67,4 +69,6 @@ public partial class MemberLoans : Popup
     {
 
     }
+
+  
 }

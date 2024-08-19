@@ -74,6 +74,9 @@
 	  <MauiXaml Update="Pages\DepositPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\IndexPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\LoanApplication.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

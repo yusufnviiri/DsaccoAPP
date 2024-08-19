@@ -5,6 +5,7 @@
              HeightRequest="500"
              MaximumWidthRequest="600" Padding="10,5"
              Title="Login">
+   
     <ScrollView >
         <FlexLayout  JustifyContent="SpaceEvenly" AlignContent="SpaceAround"
 Wrap="Wrap">

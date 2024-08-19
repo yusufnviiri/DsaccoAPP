@@ -11,6 +11,7 @@ namespace DsaccoAPP
             Routing.RegisterRoute(nameof(Login), typeof(Login));            
             Routing.RegisterRoute(nameof(Register), typeof(Register));
             Routing.RegisterRoute(nameof(AllLoans), typeof(AllLoans));
+            Routing.RegisterRoute(nameof(IndexPage), typeof(IndexPage));
 
 
             MainPage = new AppShell();

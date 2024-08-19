@@ -15,7 +15,7 @@ public partial class Login : ContentPage
 
     private UserDto _userDataInjector { get; set; }
     string baseUrl = "https://localhost:7231/api/Login/login";
-	string userUrl = "https://localhost:7231/api/Login/user";
+    string userUrl = "https://localhost:7231/api/Login/user";
     string loanTypeUrl = "https://localhost:7231/api/Loan/loantypes";
     string accountUrl = "https://localhost:7231/api/Account/accounts";
     string sharesUrl = "https://localhost:7231/api/Account/membershares";
@@ -23,70 +23,71 @@ public partial class Login : ContentPage
 
 
     string email;
-	string password;
-	//public Login(UserDto userdata)
-	//{
-	//	_userDataInjector = userdata;
-	//	InitializeComponent();
-	//	BindingContext = this;
-	//	client = new HttpClient
-	//	{
-	//		BaseAddress = new Uri(baseUrl)
-	//	};
-	//}
-	public Login()
-	{
-		InitializeComponent();
-		BindingContext = this;
-		client = new HttpClient
-		{
-			BaseAddress = new Uri(baseUrl)
-		};
+    string password;
+    //public Login(UserDto userdata)
+    //{
+    //	_userDataInjector = userdata;
+    //	InitializeComponent();
+    //	BindingContext = this;
+    //	client = new HttpClient
+    //	{
+    //		BaseAddress = new Uri(baseUrl)
+    //	};
+    //}
+    public Login()
+    {
+        InitializeComponent();
+        BindingContext = this;
+        client = new HttpClient
+        {
+            BaseAddress = new Uri(baseUrl)
+        };
         clientShares = new HttpClient
         {
             BaseAddress = new Uri(sharesUrl)
         };
     }
-	public string Names { get; set; } 
+    public string Names { get; set; }
     public string Email
-	{
-		get { return email; }
-		set { email = value; OnPropertyChanged();
+    {
+        get { return email; }
+        set { email = value; OnPropertyChanged();
         }
     }
-	public string Password
-	{
-		get { return password; }
-		set { password = value;
-			OnPropertyChanged();
-		}
-	}
-	
+    public string Password
+    {
+        get { return password; }
+        set { password = value;
+            OnPropertyChanged();
+        }
+    }
+
     private async void loginUser(object sender, EventArgs e)
     {
-		UserLogin loginData= new UserLogin { Email=Email,Password=Password};
-		var json = JsonConvert.SerializeObject(loginData);
-		var postData= new StringContent(json,Encoding.UTF8,"application/json");
-		var res = await client.PostAsync(baseUrl, postData);
+        UserLogin loginData = new UserLogin { Email = Email, Password = Password };
+        var json = JsonConvert.SerializeObject(loginData);
+        var postData = new StringContent(json, Encoding.UTF8, "application/json");
+        var res = await client.PostAsync(baseUrl, postData);
         if (!res.IsSuccessStatusCode)
         {
             DisplayAlert("warning", $"Incorrect Password or Email {Email} ,{Password}", "Ok");
-		}
-		else
-		{
+        }
+        else
+        {
             UserViewModel viewModel = new UserViewModel();
-			viewModel = await GetUser();
-          
-			Names = $"{viewModel.LName} {viewModel.FName}";
-			Email = "";
-			Password = "";
-			var pageParams = new Dictionary<string, object> { { "usermodel",viewModel } };
+            viewModel = await GetUser();
 
-       var route = $"{nameof(AccountData)}";
-			await Shell.Current.GoToAsync(route,pageParams);
-		}
+            Names = $"{viewModel.LName} {viewModel.FName}";
+            Email = "";
+            Password = "";
+            var pageParams = new Dictionary<string, object> { { "usermodel", viewModel } };
+            await Shell.Current.GoToAsync(nameof(IndexPage));
 
-    }
+            //     var route = $"{nameof(AccountData)}";
+            //	await Shell.Current.GoToAsync(route,pageParams);
+            //}
+
+        } }
 
 	public async Task<UserViewModel> GetUser()
 	{
