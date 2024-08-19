@@ -43,86 +43,39 @@
                                                 TextColor="#F7B548"   HorizontalOptions="End" />
                                 </HorizontalStackLayout>
                                 <HorizontalStackLayout >
-
-
-
-                                    <Label                                                                          MinimumWidthRequest="160"
-
-
-
-Text="Loan Period"
-FontAttributes="Bold"
-   FontSize="12"
-
-TextColor="#f5f5f4"
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
-                                <Label 
-   FontSize="12"
-
-   TextColor="#F7B548"                                
-Text="{Binding LoanPeriod }"
-FontAttributes="Bold"
-VerticalOptions="Center" 
-HorizontalOptions="End" />
+                                    <Label  MinimumWidthRequest="160" Text="Loan Period"
+                                            FontAttributes="Bold"   FontSize="12"
+                                            TextColor="#f5f5f4" VerticalOptions="Center" 
+                                            HorizontalOptions="Start" />
+                                    <Label    FontSize="12"   TextColor="#F7B548"        
+                                              Text="{Binding LoanPeriod }"  FontAttributes="Bold"
+                                              VerticalOptions="Center" HorizontalOptions="End" />
                                 </HorizontalStackLayout>
                                 <HorizontalStackLayout>
-
-                                    <Label 
- FontSize="12"
-                                    MinimumWidthRequest="160"
-
-TextColor="#f5f5f4"
-Text="Current Payments"
-TextTransform="Uppercase"
-FontAttributes="Bold"
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
-                                <Label  
-FontSize="12"
-   TextColor="#F7B548"                                
-Text="{Binding NumberOfPayments  }"
-FontAttributes="Bold"
-VerticalOptions="Center" 
-HorizontalOptions="End" />
+                                    <Label FontSize="12" MinimumWidthRequest="160"
+                                           TextColor="#f5f5f4" Text="Current Payments"
+                                           TextTransform="Uppercase" FontAttributes="Bold"
+                                           VerticalOptions="Center" HorizontalOptions="Start" />
+                                <Label  FontSize="12"   TextColor="#F7B548"  
+                                        Text="{Binding NumberOfPayments  }" FontAttributes="Bold"
+                                        VerticalOptions="Center" HorizontalOptions="End" />
                                 </HorizontalStackLayout>
                                 <HorizontalStackLayout>
-
-                                    <Label   
-     TextColor="#f5f5f4"
-     Text="Pay Amount"    FontSize="12"
-                                    MinimumWidthRequest="160"
-
-     FontAttributes="Bold"
-     VerticalOptions="Center" 
-     HorizontalOptions="Start" />
-                                <Label   
-   FontSize="12"
-
-   TextColor="#F7B548"                                
-Text="{Binding PayAmount  }"
-FontAttributes="Bold"
-VerticalOptions="Center" 
-HorizontalOptions="End" />
+                                    <Label  TextColor="#f5f5f4" Text="Pay Amount"  
+                                            FontSize="12" MinimumWidthRequest="160"
+                                            FontAttributes="Bold" VerticalOptions="Center" 
+                                            HorizontalOptions="Start" />
+                                <Label FontSize="12" TextColor="#F7B548" 
+                                       Text="{Binding PayAmount  }" FontAttributes="Bold"
+                                       VerticalOptions="Center" HorizontalOptions="End" />
                                 </HorizontalStackLayout>
                                 <HorizontalStackLayout  >
-
-                                    <Label    FontSize="12"
-                                    MinimumWidthRequest="160"
-     TextColor="#f5f5f4"
-     Text="Outstanding Balance"
-     FontAttributes="Bold"
-
-     VerticalOptions="Center" 
-     HorizontalOptions="Start" />
-                                <Label 
-   FontSize="12"
-   TextColor="#F7B548"                                
-Text="{Binding OutstandingBalance}"
-FontAttributes="Bold"
-
-VerticalOptions="Center" 
-HorizontalOptions="End" />
+                                    <Label    FontSize="12" MinimumWidthRequest="160"
+                                              TextColor="#f5f5f4" Text="Outstanding Balance"
+                                              FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" />
+                                <Label  FontSize="12" TextColor="#F7B548" 
+                                        Text="{Binding OutstandingBalance}" FontAttributes="Bold"
+                                        VerticalOptions="Center" HorizontalOptions="End" />
                                 </HorizontalStackLayout>
                                 <HorizontalStackLayout>
 
