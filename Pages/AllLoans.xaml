@@ -40,13 +40,13 @@
                             <Border.StrokeShape>
                                 <RoundRectangle CornerRadius="5"/>
                             </Border.StrokeShape>
-                            <VerticalStackLayout MinimumWidthRequest="250">
-                                <HorizontalStackLayout MinimumWidthRequest="150">
+                            <VerticalStackLayout >
+                                <HorizontalStackLayout >
                                 <Label 
                                     Text="Loan Category"
                                     FontAttributes="Bold"
                                     FontSize="12"
-                                    MinimumWidthRequest="200"
+                                    MinimumWidthRequest="160"
 
    TextColor="#f5f5f4"
    VerticalOptions="Center" 
@@ -59,10 +59,11 @@
    VerticalOptions="Center" 
    HorizontalOptions="End" />
                                 </HorizontalStackLayout>
-                                    <HorizontalStackLayout MinimumWidthRequest="150">
+                                    <HorizontalStackLayout >
 
 
-                                        <Label                                      MinimumWidthRequest="200"
+                                    <Label                                                                          MinimumWidthRequest="160"
+
 
 
    Text="Amount Applied"
@@ -80,11 +81,12 @@
    TextColor="#F7B548"
    HorizontalOptions="End" />
                                 </HorizontalStackLayout>
-                                <HorizontalStackLayout MinimumWidthRequest="150">
+                                <HorizontalStackLayout >
 
 
 
-                                    <Label                                      MinimumWidthRequest="200"
+                                    <Label                                                                          MinimumWidthRequest="160"
+
 
 
 Text="Loan Period"
@@ -107,7 +109,7 @@ HorizontalOptions="End" />
 
                                     <Label 
  FontSize="12"
- MinimumWidthRequest="200"
+                                    MinimumWidthRequest="160"
 
 TextColor="#f5f5f4"
 Text="Current Payments"
@@ -128,7 +130,7 @@ HorizontalOptions="End" />
                                     <Label   
      TextColor="#f5f5f4"
      Text="Pay Amount"    FontSize="12"
- MinimumWidthRequest="200"
+                                    MinimumWidthRequest="160"
 
      FontAttributes="Bold"
      VerticalOptions="Center" 
@@ -145,7 +147,7 @@ HorizontalOptions="End" />
                                 <HorizontalStackLayout  >
 
                                     <Label    FontSize="12"
- MinimumWidthRequest="200"
+                                    MinimumWidthRequest="160"
      TextColor="#f5f5f4"
      Text="Outstanding Balance"
      FontAttributes="Bold"
@@ -164,7 +166,7 @@ HorizontalOptions="End" />
                                 <HorizontalStackLayout>
 
                                     <Label       FontSize="12"
- MinimumWidthRequest="200"
+                                    MinimumWidthRequest="160"
 
      TextColor="#f5f5f4"
      Text="Loan Interest"
@@ -186,7 +188,7 @@ HorizontalOptions="End" />
                                 <HorizontalStackLayout  >
 
                                     <Label      FontSize="12"
- MinimumWidthRequest="200"
+                                    MinimumWidthRequest="160"
 
      TextColor="#f5f5f4"
      Text="Status"
@@ -210,7 +212,7 @@ HorizontalOptions="End" />
 Text="Installments"
 FontAttributes="Bold"
    FontSize="12"
- MinimumWidthRequest="200"
+                                    MinimumWidthRequest="160"
 
 TextColor="#f5f5f4"
 VerticalOptions="Center" 
@@ -228,7 +230,7 @@ HorizontalOptions="Start" />
 
                                     <Label  
     FontSize="12"
- MinimumWidthRequest="200"
+                                    MinimumWidthRequest="160"
 
 TextColor="#f5f5f4"
 Text="Completed?"
@@ -249,7 +251,7 @@ HorizontalOptions="Start" />
 
                                     <Label  
    FontSize="12"
- MinimumWidthRequest="200"
+                                    MinimumWidthRequest="160"
 
 TextColor="#f5f5f4"
 Text="Security"
@@ -270,7 +272,7 @@ HorizontalOptions="Start" />
 
                                     <Label  
   FontSize="12"
- MinimumWidthRequest="200"
+                                    MinimumWidthRequest="160"
 
 TextColor="#f5f5f4"
 Text="First Witness Name"
@@ -291,7 +293,7 @@ HorizontalOptions="Start" />
 
                                     <Label 
    FontSize="12"
- MinimumWidthRequest="200"
+                                    MinimumWidthRequest="160"
 
 TextColor="#f5f5f4"
 Text="First Witness Address"
@@ -312,7 +314,7 @@ HorizontalOptions="Start" />
 
                                     <Label  
    FontSize="12"
- MinimumWidthRequest="200"
+                                    MinimumWidthRequest="160"
 
 TextColor="#f5f5f4"
 Text="First Witness Contact"
@@ -333,7 +335,7 @@ HorizontalOptions="Start" />
 
                                     <Label  
    FontSize="12"
- MinimumWidthRequest="200"
+                                    MinimumWidthRequest="160"
 
 TextColor="#f5f5f4"
 Text="Second Witness Name"
@@ -354,7 +356,7 @@ HorizontalOptions="Start" />
 
                                     <Label   
    FontSize="12"
- MinimumWidthRequest="200"
+                                    MinimumWidthRequest="160"
 
 TextColor="#f5f5f4"
 Text="Second Witness Address"
@@ -375,7 +377,7 @@ HorizontalOptions="Start" />
 
                                     <Label  
    FontSize="12"
- MinimumWidthRequest="200"
+                                    MinimumWidthRequest="160"
 
 TextColor="#f5f5f4"
 Text="Second Witness Contact"
@@ -397,20 +399,18 @@ HorizontalOptions="End" />
 
 
 
-                                    <Grid VerticalOptions="EndAndExpand"  ColumnDefinitions="*,*,*,*" ColumnSpacing="5" Margin="5" >
-                                        <Button Grid.Column="0" Text="REFRESH" FontAttributes="Bold" CharacterSpacing="1" BackgroundColor="#1d4ed8"
+                                    <Grid VerticalOptions="EndAndExpand"  ColumnDefinitions="*,*,*" ColumnSpacing="5" Margin="5" >
+                                        <Button Grid.Column="0" Text="REFRESH" FontAttributes="Bold"  BackgroundColor="#1d4ed8"
 Clicked="GetallLoans"/>
-                                        <Button Grid.Column="1" Text="CLOSE" FontAttributes="Bold" CharacterSpacing="3"
-BackgroundColor="red"
-Clicked="BackToHome"/>
+                                        
                                    
 
-                                    <Button Text="Approve" Grid.Column="2" 
+                                    <Button Text="Approve" Grid.Column="1" 
 
          BackgroundColor="Green"
      
          Clicked="OnApproveLoan"/>
-                                    <Button Text="Reject" Grid.Column="3" 
+                                    <Button Text="Reject" Grid.Column="2" 
 
 BackgroundColor="red"
 
