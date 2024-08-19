@@ -40,8 +40,8 @@
                             <Border.StrokeShape>
                                 <RoundRectangle CornerRadius="5"/>
                             </Border.StrokeShape>
-                            <VerticalStackLayout MinimumWidthRequest="350">
-                                <HorizontalStackLayout>
+                            <VerticalStackLayout MinimumWidthRequest="250">
+                                <HorizontalStackLayout MinimumWidthRequest="150">
                                 <Label 
                                     Text="Loan Category"
                                     FontAttributes="Bold"
@@ -59,9 +59,10 @@
    VerticalOptions="Center" 
    HorizontalOptions="End" />
                                 </HorizontalStackLayout>
-                                <HorizontalStackLayout>
+                                    <HorizontalStackLayout MinimumWidthRequest="150">
 
-                                    <Label                                      MinimumWidthRequest="200"
+
+                                        <Label                                      MinimumWidthRequest="200"
 
 
    Text="Amount Applied"
@@ -79,7 +80,7 @@
    TextColor="#F7B548"
    HorizontalOptions="End" />
                                 </HorizontalStackLayout>
-                                <HorizontalStackLayout>
+                                <HorizontalStackLayout MinimumWidthRequest="150">
 
 
 
@@ -392,19 +393,30 @@ HorizontalTextAlignment="End"
 VerticalOptions="Center" 
 HorizontalOptions="End" />
                                 </HorizontalStackLayout>
-                                <HorizontalStackLayout Margin="0,10,0,0"  Spacing="50" >
 
-                                    <Button Text="Approve"   MinimumWidthRequest="150"
+
+
+
+                                    <Grid VerticalOptions="EndAndExpand"  ColumnDefinitions="*,*,*,*" ColumnSpacing="5" Margin="5" >
+                                        <Button Grid.Column="0" Text="REFRESH" FontAttributes="Bold" CharacterSpacing="1" BackgroundColor="#1d4ed8"
+Clicked="GetallLoans"/>
+                                        <Button Grid.Column="1" Text="CLOSE" FontAttributes="Bold" CharacterSpacing="3"
+BackgroundColor="red"
+Clicked="BackToHome"/>
+                                   
+
+                                    <Button Text="Approve" Grid.Column="2" 
 
          BackgroundColor="Green"
-         FontSize="15"
+     
          Clicked="OnApproveLoan"/>
-                                    <Button Text="Reject"   MinimumWidthRequest="150"
+                                    <Button Text="Reject" Grid.Column="3" 
 
 BackgroundColor="red"
-FontSize="15"
+
 Clicked="OnRejectLoan"/>
-                                </HorizontalStackLayout>
+                                </Grid>
+
 
                             </VerticalStackLayout>
 
