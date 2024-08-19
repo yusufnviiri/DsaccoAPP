@@ -136,4 +136,16 @@ public partial class AllLoans : ContentPage
 
         }
     }
+
+    private async void PayLoan(object sender, EventArgs e)
+    {
+        var button = sender as Button;
+        var selectedItem = button.BindingContext as Loan;
+        if (selectedItem != null)
+        {
+            ParamId paramId = new ParamId() { RefId = selectedItem.LoanId, Status = "Rejected" };
+            this.ShowPopupAsync(new PayLoan(selectedItem));
+
+        }
+    }
 }

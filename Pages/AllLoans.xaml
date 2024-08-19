@@ -16,7 +16,7 @@
                 HorizontalOptions="Center" />
 
                 <Grid VerticalOptions="EndAndExpand"  ColumnDefinitions="2*,*" ColumnSpacing="5" Margin="5" >
-                    <Button Grid.Column="0" Text="REFRESH" FontAttributes="Bold" CharacterSpacing="3" BackgroundColor="#1d4ed8"    Clicked="GetallLoans"/>
+                    <Button Grid.Column="0" Text="Pay Loan" FontAttributes="Bold" CharacterSpacing="3" BackgroundColor="#1d4ed8"    Clicked="PayLoan"/>
                     <Button Grid.Column="1" Text="CLOSE" FontAttributes="Bold" CharacterSpacing="3"    BackgroundColor="red"    Clicked="BackToHome"/>
                 </Grid>
                 <FlexLayout x:Name="flexView"    Direction="Row"  Wrap="Wrap"     AlignItems="Start"
