@@ -88,7 +88,6 @@
                                         VerticalOptions="Center" HorizontalOptions="End" />
                                 </HorizontalStackLayout>
                                 <HorizontalStackLayout  >
-
                                     <Label  FontSize="12" MinimumWidthRequest="160" Text="Status"                
                                             TextColor="#f5f5f4"  HorizontalOptions="Start"
                                             FontAttributes="Bold" VerticalOptions="Center" />
@@ -106,172 +105,69 @@
                                 </HorizontalStackLayout>
                                 <HorizontalStackLayout>
 
-                                    <Label  
-    FontSize="12"
-                                    MinimumWidthRequest="160"
-
-TextColor="#f5f5f4"
-Text="Completed?"
-TextTransform="Uppercase"
-FontAttributes="Bold"
-
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
-                                <Label      FontSize="12"
-
-   TextColor="#F7B548"                                
-     Text="{Binding loanCompletiton  }"
-     FontAttributes="Bold"
-     VerticalOptions="Center" 
-     HorizontalOptions="End" />
+                                    <Label FontSize="12" MinimumWidthRequest="160" TextColor="#f5f5f4"
+                                           Text="Completed?" TextTransform="Uppercase"
+                                           FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" />
+                                <Label  FontSize="12" TextColor="#F7B548"      
+                                        Text="{Binding loanCompletiton}" FontAttributes="Bold"
+                                        VerticalOptions="Center" HorizontalOptions="End" />
                                 </HorizontalStackLayout>
                                 <HorizontalStackLayout>
-
-                                    <Label  
-   FontSize="12"
-                                    MinimumWidthRequest="160"
-
-TextColor="#f5f5f4"
-Text="Security"
-FontAttributes="Bold"
-
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
-                                <Label      FontSize="12"
-
-   TextColor="#F7B548"                                
-      Text="{Binding Security }"
-      FontAttributes="Bold"
-    
-      VerticalOptions="Center" 
-      HorizontalOptions="End" />
+                                    <Label  FontSize="12" MinimumWidthRequest="160"
+                                            TextColor="#f5f5f4" Text="Security"
+                                            FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" />
+                                <Label FontSize="12" TextColor="#F7B548"  
+                                       Text="{Binding Security }" FontAttributes="Bold"
+                                       VerticalOptions="Center" HorizontalOptions="End" />
                                 </HorizontalStackLayout>
                                 <HorizontalStackLayout>
-
-                                    <Label  
-  FontSize="12"
-                                    MinimumWidthRequest="160"
-
-TextColor="#f5f5f4"
-Text="First Witness Name"
-FontAttributes="Bold"
-
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
-                                <Label      FontSize="12"
-
-   TextColor="#F7B548"                                
-     Text="{Binding  LoanWitness.FirstWitnessName }"
-     FontAttributes="Bold"
-
-     VerticalOptions="Center" 
-     HorizontalOptions="End" />
+                                    <Label  FontSize="12" MinimumWidthRequest="160"
+                                            TextColor="#f5f5f4" Text="First Witness Name"
+                                            FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" />
+                                <Label  FontSize="12" TextColor="#F7B548"  
+                                        Text="{Binding  LoanWitness.FirstWitnessName }" FontAttributes="Bold"
+                                        VerticalOptions="Center" HorizontalOptions="End" />
                                 </HorizontalStackLayout>
                                 <HorizontalStackLayout>
-
-                                    <Label 
-   FontSize="12"
-                                    MinimumWidthRequest="160"
-
-TextColor="#f5f5f4"
-Text="First Witness Address"
-FontAttributes="Bold"
-
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
-                                <Label      FontSize="12"
-
-   TextColor="#F7B548"                                
-     Text="{Binding  LoanWitness.FirstWitnessAddress }"
-     FontAttributes="Bold"
-
-     VerticalOptions="Center" 
-     HorizontalOptions="End" />
+                                    <Label FontSize="12" MinimumWidthRequest="160"
+                                           TextColor="#f5f5f4" Text="First Witness Address"
+                                           FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" />
+                                <Label FontSize="12" TextColor="#F7B548"  
+                                       Text="{Binding  LoanWitness.FirstWitnessAddress }" FontAttributes="Bold"
+                                       VerticalOptions="Center" HorizontalOptions="End" />
                                 </HorizontalStackLayout>
                                 <HorizontalStackLayout>
-
-                                    <Label  
-   FontSize="12"
-                                    MinimumWidthRequest="160"
-
-TextColor="#f5f5f4"
-Text="First Witness Contact"
-FontAttributes="Bold"
-
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
-                                <Label      FontSize="12"
-
-   TextColor="#F7B548"                                
-     Text="{Binding  LoanWitness.FirstWitnessContact }"
-     FontAttributes="Bold"
-
-     VerticalOptions="Center" 
-     HorizontalOptions="End" />
+                                    <Label  FontSize="12" MinimumWidthRequest="160"
+                                            TextColor="#f5f5f4" Text="First Witness Contact"
+                                            FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" />
+                                <Label FontSize="12" TextColor="#F7B548" 
+                                       Text="{Binding  LoanWitness.FirstWitnessContact }"  FontAttributes="Bold"
+                                       VerticalOptions="Center" HorizontalOptions="End" />
                                 </HorizontalStackLayout>
                                 <HorizontalStackLayout>
-
-                                    <Label  
-   FontSize="12"
-                                    MinimumWidthRequest="160"
-
-TextColor="#f5f5f4"
-Text="Second Witness Name"
-FontAttributes="Bold"
-
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
-                                <Label      FontSize="12"
-
-   TextColor="#F7B548"                                
-     Text="{Binding  LoanWitness.SecondWitnessName }"
-     FontAttributes="Bold"
-  
-     VerticalOptions="Center" 
-     HorizontalOptions="End" />
+                                    <Label  FontSize="12" MinimumWidthRequest="160"
+                                            TextColor="#f5f5f4" Text="Second Witness Name"
+                                            FontAttributes="Bold" VerticalOptions="Center" 
+                                            HorizontalOptions="Start" />
+                                <Label  FontSize="12" TextColor="#F7B548"  
+                                        Text="{Binding  LoanWitness.SecondWitnessName }" FontAttributes="Bold"
+                                        VerticalOptions="Center" HorizontalOptions="End" />
                                 </HorizontalStackLayout>
                                 <HorizontalStackLayout>
-
-                                    <Label   
-   FontSize="12"
-                                    MinimumWidthRequest="160"
-
-TextColor="#f5f5f4"
-Text="Second Witness Address"
-FontAttributes="Bold"
-
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
-                                <Label      FontSize="12"
-
-   TextColor="#F7B548"                                
-     Text="{Binding  LoanWitness.SecondWitnessAddress}"
-     FontAttributes="Bold"
-    
-     VerticalOptions="Center" 
-     HorizontalOptions="End" />
+                                    <Label FontSize="12" MinimumWidthRequest="160"
+                                           TextColor="#f5f5f4" Text="Second Witness Address"
+                                           FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" />
+                                <Label FontSize="12" TextColor="#F7B548"   
+                                       Text="{Binding  LoanWitness.SecondWitnessAddress}"   FontAttributes="Bold"
+                                       VerticalOptions="Center" HorizontalOptions="End" />
                                 </HorizontalStackLayout>
                                 <HorizontalStackLayout  >
-
-                                    <Label  
-   FontSize="12"
-                                    MinimumWidthRequest="160"
-
-TextColor="#f5f5f4"
-Text="Second Witness Contact"
-FontAttributes="Bold"
-
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
-                                <Label  
-   FontSize="12"
-
-   TextColor="#F7B548"                                
-Text="{Binding  LoanWitness.SecondWitnessContact }"
-FontAttributes="Bold"
-HorizontalTextAlignment="End"
-VerticalOptions="Center" 
-HorizontalOptions="End" />
+                                    <Label  FontSize="12" MinimumWidthRequest="160"
+                                            TextColor="#f5f5f4" Text="Second Witness Contact"
+                                            FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start" />
+                                <Label FontSize="12" TextColor="#F7B548" 
+                                       Text="{Binding  LoanWitness.SecondWitnessContact }" FontAttributes="Bold"
+                                       HorizontalTextAlignment="End" VerticalOptions="Center" HorizontalOptions="End" />
                                 </HorizontalStackLayout>
 
 
