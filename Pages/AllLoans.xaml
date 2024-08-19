@@ -16,8 +16,8 @@
                 HorizontalOptions="Center" />
 
                 <Grid VerticalOptions="EndAndExpand"  ColumnDefinitions="2*,*" ColumnSpacing="5" Margin="5" >
-                    <Button Grid.Column="0" Text="Pay Loan" FontAttributes="Bold" CharacterSpacing="3" BackgroundColor="#1d4ed8"    Clicked="PayLoan"/>
-                    <Button Grid.Column="1" Text="CLOSE" FontAttributes="Bold" CharacterSpacing="3"    BackgroundColor="red"    Clicked="BackToHome"/>
+                   
+                    
                 </Grid>
                 <FlexLayout x:Name="flexView"    Direction="Row"  Wrap="Wrap"     AlignItems="Start"
                     JustifyContent="SpaceEvenly"  BindableLayout.ItemsSource="{Binding LoansBindableList}" Padding="30">
@@ -170,10 +170,12 @@
                                        HorizontalTextAlignment="End" VerticalOptions="Center" HorizontalOptions="End" />
                                 </HorizontalStackLayout>
                                 
-    <Grid VerticalOptions="EndAndExpand"  ColumnDefinitions="*,*,*" ColumnSpacing="5" Margin="5" >
+    <Grid VerticalOptions="EndAndExpand"  ColumnDefinitions="*,*,*,*" ColumnSpacing="5" Margin="0,5" >
           <Button Grid.Column="0" Text="Refresh"   BackgroundColor="#1d4ed8" Clicked="GetallLoans"/>
           <Button Text="Approve" Grid.Column="1"  BackgroundColor="Green"            Clicked="OnApproveLoan"/>   
         <Button Text="Reject" Grid.Column="2" BackgroundColor="red" Clicked="OnRejectLoan"/>
+
+                                    <Button Grid.Column="3" Text="Pay Loan"   BackgroundColor="#1d4ed8"    Clicked="PayLoan"/>
                                 </Grid>
                             </VerticalStackLayout>
                         </Border>

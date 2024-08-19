@@ -70,7 +70,7 @@ public partial class Login : ContentPage
 		var res = await client.PostAsync(baseUrl, postData);
         if (!res.IsSuccessStatusCode)
         {
-            DisplayAlert("warning", "Incorrect Password or Email", "Ok");
+            DisplayAlert("warning", $"Incorrect Password or Email {Email} ,{Password}", "Ok");
 		}
 		else
 		{

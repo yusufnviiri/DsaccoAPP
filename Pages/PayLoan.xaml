@@ -37,6 +37,7 @@
                      HorizontalOptions="End"                                  
                      Placeholder="0"
                      TextColor="White"
+                       IsReadOnly="True"
                      BackgroundColor="Green"
                      VerticalOptions="Center"  
                      Keyboard="Numeric"      />

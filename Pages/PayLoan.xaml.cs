@@ -16,8 +16,13 @@ public partial class PayLoan : Popup
     decimal amountPaid;
     public PayLoan(Loan loan)
     {
+        client = new HttpClient
+        {
+            BaseAddress = new Uri(loanPaymentUrl)
+        };
         InitializeComponent();
         this.LoanId = loan.LoanId;
+        this.AmountPaid = Math.Floor((loan.PayAmount / loan.NumberOfInstallments) + (loan.PayAmount % loan.NumberOfInstallments));
         BindingContext = this;
     }
     public decimal AmountPaid
