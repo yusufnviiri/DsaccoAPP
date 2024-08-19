@@ -97,8 +97,12 @@ public partial class IndexPage : ContentPage
     {
         var response = await client.GetStringAsync(sharesUrl);
         var res = JsonConvert.DeserializeObject<IEnumerable<MemberShares>>(response);
-        return res.FirstOrDefault();
+        if (res.Any())
+        {
+            return res.FirstOrDefault();
 
+        }
+        else { return new MemberShares(); }
     }
     public async Task<List<Account>> GetMemberAccounts()
     {
