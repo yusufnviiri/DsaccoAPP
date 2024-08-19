@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DsaccoAPP.Pages.IndexPage"
-             Title="IndexPage">
+             x:Class="DsaccoAPP.Pages.IndexPage"           >
     <ContentPage.MenuBarItems>
         <MenuBarItem Text="Loans">
-            <MenuFlyoutItem Text="New Loan" Clicked="LoanApplication"></MenuFlyoutItem>
-            <MenuFlyoutItem Text="View Loans" Clicked="LoanApplication"></MenuFlyoutItem>
-            <MenuFlyoutItem Text="All Loans" Clicked="LoanApplication"></MenuFlyoutItem>
+            <MenuFlyoutItem Text="New Loan" Clicked="LoanApplicatation"></MenuFlyoutItem>
+            <MenuFlyoutItem Text="View Loans" Clicked="GetMemberLoans"></MenuFlyoutItem>
+            <MenuFlyoutItem Text="All Loans" Clicked="AllLoansInDb"></MenuFlyoutItem>
         </MenuBarItem>
         <MenuBarItem Text="Account">
-            <MenuFlyoutItem Text="New Account" Clicked="LoanApplication"></MenuFlyoutItem>
-            <MenuFlyoutItem Text="View Accounts" Clicked="LoanApplication"></MenuFlyoutItem>
-            <MenuFlyoutItem Text="Deposit" Clicked="LoanApplication"></MenuFlyoutItem>
+            <MenuFlyoutItem Text="New Account" Clicked="CreateAccount"></MenuFlyoutItem>
+            <MenuFlyoutItem Text="View Accounts" Clicked="GetAccounts"></MenuFlyoutItem>
+            <MenuFlyoutSubItem Text="Deposits">
+                <MenuFlyoutItem Text="Cash Deposit" Clicked="CashDeposit"></MenuFlyoutItem>
+                <MenuFlyoutItem Text="View Deposits" Clicked="GetDeposits"></MenuFlyoutItem>
 
-            <MenuFlyoutItem Text="Withdraw" Clicked="LoanApplication"></MenuFlyoutItem>
-            <MenuFlyoutItem Text="View Deposits" Clicked="LoanApplication"></MenuFlyoutItem>
-            <MenuFlyoutItem Text="View Withdraws" Clicked="LoanApplication"></MenuFlyoutItem>
-
+            </MenuFlyoutSubItem>
+            <MenuFlyoutSubItem Text="Withdraws">
+                <MenuFlyoutItem Text="Cash Withdraw" Clicked="CashWithdraw"></MenuFlyoutItem>
+                <MenuFlyoutItem Text="View Withdraws" Clicked="GetWithdraws"></MenuFlyoutItem>
+           </MenuFlyoutSubItem> 
+        </MenuBarItem>
+        <MenuBarItem Text="Shares">
+            <MenuFlyoutItem Text="Buy Shares" Clicked="PurchaseShares"></MenuFlyoutItem>
+            <MenuFlyoutItem Text="Sell Shares" Clicked="SellMemberShares"></MenuFlyoutItem>
         </MenuBarItem>
     </ContentPage.MenuBarItems>
     <VerticalStackLayout>

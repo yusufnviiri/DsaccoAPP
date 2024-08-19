@@ -24,16 +24,7 @@ public partial class Login : ContentPage
 
     string email;
     string password;
-    //public Login(UserDto userdata)
-    //{
-    //	_userDataInjector = userdata;
-    //	InitializeComponent();
-    //	BindingContext = this;
-    //	client = new HttpClient
-    //	{
-    //		BaseAddress = new Uri(baseUrl)
-    //	};
-    //}
+   
     public Login()
     {
         InitializeComponent();
@@ -81,13 +72,13 @@ public partial class Login : ContentPage
             Email = "";
             Password = "";
             var pageParams = new Dictionary<string, object> { { "usermodel", viewModel } };
-            await Shell.Current.GoToAsync(nameof(IndexPage));
+            //await Shell.Current.GoToAsync(nameof(IndexPage));
 
-            //     var route = $"{nameof(AccountData)}";
-            //	await Shell.Current.GoToAsync(route,pageParams);
-            //}
+            var route = $"{nameof(AccountData)}";
+            await Shell.Current.GoToAsync(route, pageParams);
+        }
 
-        } }
+    } 
 
 	public async Task<UserViewModel> GetUser()
 	{

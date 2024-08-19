@@ -17,6 +17,10 @@
             <FlyoutItem Title="Login">
         <ShellContent ContentTemplate="{DataTemplate pages:Login}"/>
     </FlyoutItem>
-  
+    <FlyoutItem Title="Index">
+        <ShellContent ContentTemplate="{DataTemplate pages:IndexPage}"/>
+    </FlyoutItem>
+
+
 
 </Shell>
