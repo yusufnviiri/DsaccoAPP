@@ -79,66 +79,30 @@
                                 </HorizontalStackLayout>
                                 <HorizontalStackLayout>
 
-                                    <Label       FontSize="12"
-                                    MinimumWidthRequest="160"
-
-     TextColor="#f5f5f4"
-     Text="Loan Interest"
-     TextTransform="Uppercase"
-     FontAttributes="Bold"
-
-     VerticalOptions="Center" 
-     HorizontalOptions="Start" />
-                                <Label 
-   FontSize="12"
-
-   TextColor="#F7B548"                                
-Text="{Binding LoanInterest }"
-FontAttributes="Bold"
-
-VerticalOptions="Center" 
-HorizontalOptions="End" />
+                                    <Label  FontSize="12" MinimumWidthRequest="160"
+                                            TextColor="#f5f5f4" Text="Loan Interest"
+                                            TextTransform="Uppercase" FontAttributes="Bold"
+                                            VerticalOptions="Center" HorizontalOptions="Start" />
+                                <Label  FontSize="12" TextColor="#F7B548"   
+                                        Text="{Binding LoanInterest }" FontAttributes="Bold"
+                                        VerticalOptions="Center" HorizontalOptions="End" />
                                 </HorizontalStackLayout>
                                 <HorizontalStackLayout  >
 
-                                    <Label      FontSize="12"
-                                    MinimumWidthRequest="160"
-
-     TextColor="#f5f5f4"
-     Text="Status"
-     FontAttributes="Bold"
- 
-     VerticalOptions="Center" 
-     HorizontalOptions="Start" />
-                                <Label 
-   FontSize="12"
-
-   TextColor="#F7B548"                                
-Text="{Binding Status }"
-FontAttributes="Bold"
-
-VerticalOptions="Center" 
-HorizontalOptions="End" />
+                                    <Label  FontSize="12" MinimumWidthRequest="160" Text="Status"                
+                                            TextColor="#f5f5f4"  HorizontalOptions="Start"
+                                            FontAttributes="Bold" VerticalOptions="Center" />
+                                <Label FontSize="12"  TextColor="#F7B548"  
+                                       Text="{Binding Status }" FontAttributes="Bold"
+                                       VerticalOptions="Center" HorizontalOptions="End" />
                                 </HorizontalStackLayout>
                                 <HorizontalStackLayout>
-
-                                    <Label 
-Text="Installments"
-FontAttributes="Bold"
-   FontSize="12"
-                                    MinimumWidthRequest="160"
-
-TextColor="#f5f5f4"
-VerticalOptions="Center" 
-HorizontalOptions="Start" />
-                                <Label      FontSize="12"
-
-   TextColor="#F7B548"                                
-     Text="{Binding NumberOfInstallments }"
-     FontAttributes="Bold"
-  
-     VerticalOptions="Center" 
-     HorizontalOptions="End" />
+                                    <Label Text="Installments" FontAttributes="Bold"
+                                           FontSize="12" MinimumWidthRequest="160"
+                                           TextColor="#f5f5f4" VerticalOptions="Center" HorizontalOptions="Start" />
+                                <Label  FontSize="12" TextColor="#F7B548"   
+                                        Text="{Binding NumberOfInstallments }" FontAttributes="Bold"
+                                        VerticalOptions="Center" HorizontalOptions="End" />
                                 </HorizontalStackLayout>
                                 <HorizontalStackLayout>
 
