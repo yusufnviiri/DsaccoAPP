@@ -130,9 +130,10 @@ public partial class AllLoans : ContentPage
         var selectedItem = button.BindingContext as Loan;
         if (selectedItem != null)
         {
-            DisplayAlert("Item Selected", selectedItem.User.LastName + " " + selectedItem.User.FirstName, "OK");
             ParamId paramId = new ParamId() { RefId = selectedItem.LoanId, Status = "Rejected" };
             await UpdateLoanStatus(paramId);
+            DisplayAlert("Item Selected", selectedItem.User.LastName + " " + selectedItem.User.FirstName, "OK");
+
         }
     }
 }

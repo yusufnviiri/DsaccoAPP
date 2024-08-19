@@ -7,79 +7,40 @@
 
             <VerticalStackLayout BackgroundColor="#022c22" Padding="10"  >
             <Label 
-        Text="Loans"
-        TextTransform="Uppercase"
-        FontAttributes="Bold"
-        Margin="0,5"
-        TextColor="LightYellow"
-        VerticalOptions="Center"              
-        HorizontalOptions="Center" />
+                Text="Loans"
+                TextTransform="Uppercase"
+                FontAttributes="Bold"
+                Margin="0,5"
+                TextColor="LightYellow"
+                VerticalOptions="Center"               
+                HorizontalOptions="Center" />
 
                 <Grid VerticalOptions="EndAndExpand"  ColumnDefinitions="2*,*" ColumnSpacing="5" Margin="5" >
-                    <Button Grid.Column="0" Text="REFRESH" FontAttributes="Bold" CharacterSpacing="3" BackgroundColor="#1d4ed8"
-    Clicked="GetallLoans"/>
-                    <Button Grid.Column="1" Text="CLOSE" FontAttributes="Bold" CharacterSpacing="3"
-    BackgroundColor="red"
-    Clicked="BackToHome"/>
+                    <Button Grid.Column="0" Text="REFRESH" FontAttributes="Bold" CharacterSpacing="3" BackgroundColor="#1d4ed8"    Clicked="GetallLoans"/>
+                    <Button Grid.Column="1" Text="CLOSE" FontAttributes="Bold" CharacterSpacing="3"    BackgroundColor="red"    Clicked="BackToHome"/>
                 </Grid>
-                <FlexLayout x:Name="flexView"
-                    Direction="Row"
-                    Wrap="Wrap"
-                    AlignItems="Start"
-                    JustifyContent="SpaceEvenly"  BindableLayout.ItemsSource="{Binding LoansBindableList}"
-                    Padding="30">
-
-
+                <FlexLayout x:Name="flexView"    Direction="Row"  Wrap="Wrap"     AlignItems="Start"
+                    JustifyContent="SpaceEvenly"  BindableLayout.ItemsSource="{Binding LoansBindableList}" Padding="30">
                     <BindableLayout.ItemTemplate>
-
                     <DataTemplate>
-                        <Border Stroke="{StaticResource Yellow100Accent}"
-                 StrokeThickness="3"
-                 Padding="10"
-                 Margin="10">
-                            <Border.StrokeShape>
-                                <RoundRectangle CornerRadius="5"/>
+                        <Border Stroke="{StaticResource Yellow100Accent}"   StrokeThickness="3" Padding="10"         Margin="10">
+                            <Border.StrokeShape>  <RoundRectangle CornerRadius="5"/>
                             </Border.StrokeShape>
                             <VerticalStackLayout >
                                 <HorizontalStackLayout >
-                                <Label 
-                                    Text="Loan Category"
-                                    FontAttributes="Bold"
-                                    FontSize="12"
-                                    MinimumWidthRequest="160"
-
-   TextColor="#f5f5f4"
-   VerticalOptions="Center" 
-   HorizontalOptions="Start" />
-                                <Label 
-   Text="{Binding LoanType.Description }"
-   FontAttributes="Bold"
-   FontSize="12"
-   TextColor="#F7B548"                                
-   VerticalOptions="Center" 
-   HorizontalOptions="End" />
+                                <Label  Text="Loan Category" FontAttributes="Bold" 
+                                        FontSize="12" MinimumWidthRequest="160"
+                                        TextColor="#f5f5f4"   VerticalOptions="Center"                                      HorizontalOptions="Start" />
+                                <Label    Text="{Binding LoanType.Description }"   FontAttributes="Bold"
+                                          FontSize="12"   TextColor="#F7B548"                     
+                                          VerticalOptions="Center"    HorizontalOptions="End" />
                                 </HorizontalStackLayout>
                                     <HorizontalStackLayout >
-
-
-                                    <Label                                                                          MinimumWidthRequest="160"
-
-
-
-   Text="Amount Applied"
-   FontAttributes="Bold"
-   VerticalOptions="Center" 
-   FontSize="12"
-   TextColor="#f5f5f4"
-   HorizontalOptions="Start" />
-                                <Label
-   
-   Text="{Binding   PrincipleAmount}"
-   FontAttributes="Bold"
-   VerticalOptions="Center" 
-   FontSize="12"
-   TextColor="#F7B548"
-   HorizontalOptions="End" />
+                                        <Label  MinimumWidthRequest="160" Text="Amount Applied"
+                                                FontAttributes="Bold" VerticalOptions="Center" 
+                                                FontSize="12"   TextColor="#f5f5f4"   HorizontalOptions="Start" />                               <Label   Text="{Binding   PrincipleAmount}"  FontAttributes="Bold"
+                                                VerticalOptions="Center"    FontSize="12"
+                                                TextColor="#F7B548"   HorizontalOptions="End" />
                                 </HorizontalStackLayout>
                                 <HorizontalStackLayout >
 
@@ -400,7 +361,7 @@ HorizontalOptions="End" />
 
 
                                     <Grid VerticalOptions="EndAndExpand"  ColumnDefinitions="*,*,*" ColumnSpacing="5" Margin="5" >
-                                        <Button Grid.Column="0" Text="REFRESH" FontAttributes="Bold"  BackgroundColor="#1d4ed8"
+                                        <Button Grid.Column="0" Text="Refresh"   BackgroundColor="#1d4ed8"
 Clicked="GetallLoans"/>
                                         
                                    
