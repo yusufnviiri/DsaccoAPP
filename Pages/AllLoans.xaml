@@ -6,6 +6,8 @@
     <ScrollView>
 
             <VerticalStackLayout BackgroundColor="#022c22" Padding="10"  >
+            <Button Text="Back" MaximumWidthRequest="60" BackgroundColor="red" HorizontalOptions="Start" Clicked="goToIndexPage"/>
+
             <Label 
                 Text="Loans"
                 TextTransform="Uppercase"

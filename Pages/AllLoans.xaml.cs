@@ -148,4 +148,9 @@ public partial class AllLoans : ContentPage
 
         }
     }
+
+    private async void goToIndexPage(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(IndexPage));
+    }
 }
