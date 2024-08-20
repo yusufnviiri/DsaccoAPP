@@ -4,12 +4,13 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:DsaccoAPP"
+    xmlns:access="clr-namespace:DsaccoAPP.Pages"
     xmlns:pages="clr-namespace:DsaccoAPP.Pages"
     BackgroundColor="Blue"
     Shell.FlyoutBehavior="Flyout">
     <ShellContent 
         Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
+        ContentTemplate="{DataTemplate access:Login}"
         Route="MainPage"  />
     <FlyoutItem Title="Register">
         <ShellContent ContentTemplate="{DataTemplate pages:Register}"/>

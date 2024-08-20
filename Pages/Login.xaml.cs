@@ -72,10 +72,8 @@ public partial class Login : ContentPage
             Email = "";
             Password = "";
             var pageParams = new Dictionary<string, object> { { "usermodel", viewModel } };
-            //await Shell.Current.GoToAsync(nameof(IndexPage));
+            await Shell.Current.GoToAsync(nameof(IndexPage));
 
-            var route = $"{nameof(AccountData)}";
-            await Shell.Current.GoToAsync(route, pageParams);
         }
 
     } 
