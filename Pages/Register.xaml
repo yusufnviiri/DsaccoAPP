@@ -4,7 +4,7 @@
              x:Class="DsaccoAPP.Pages.Register"
              Title="Register">
     <ScrollView>
-    <VerticalStackLayout>
+    <VerticalStackLayout MaximumWidthRequest="600">
         
         <Label 
             Text="Register User"
@@ -12,21 +12,31 @@
             HorizontalOptions="Center" />
             <Grid RowDefinitions="*,*,*,*,*,*,* " ColumnDefinitions="*,*" RowSpacing="5" ColumnSpacing="10">
 
-                <Entry BackgroundColor="Blue" Grid.Row="0" 
+                <Entry Grid.Row="0" 
                        Grid.Column="0"
+                       Placeholder="First Name"
                        Text="{Binding FirstName }"/>
-                <Entry BackgroundColor="Blue" Grid.Row="0" 
+                <Entry  Grid.Row="0" 
                        Grid.Column="1"
+                                               Placeholder="Last Name"
+
                        Text="{Binding LastName }"/>
-                <Entry BackgroundColor="Blue" Grid.Row="1" 
+                <Entry Grid.Row="1" 
                        Grid.Column="0"
+                                              Placeholder="Email"
+
                        Keyboard="Email"
                        Text="{Binding Email  }"/>
-                <Entry BackgroundColor="Blue" Grid.Row="1" 
+                <Entry  Grid.Row="1" 
+
                        Grid.Column="1"
+                                               Placeholder="Password"
+
                        Text="{Binding Password  }"/>                
-                <Entry  BackgroundColor="Blue" Grid.Row="3" 
+                <Entry   Grid.Row="3" 
                         Grid.Column="0"
+                                                Placeholder="Age"
+
                         Text="{Binding Age }"/>
                 <Button Text="Submit" Grid.Row="3" Grid.Column="1"
                         Clicked="RegisterUser"/>               </Grid>

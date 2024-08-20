@@ -7,10 +7,12 @@
              Title="Login">
    
     <ScrollView >
-        <FlexLayout  JustifyContent="SpaceEvenly" AlignContent="SpaceAround"
-Wrap="Wrap">
-                <Label 
-            Text="Login Page"
+        <VerticalStackLayout>         
+            
+            <Label 
+            Text="LOGIN PAGE"
+                FontAttributes="Bold"
+                FontSize="15"                
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
         <Label 
@@ -22,15 +24,17 @@ Wrap="Wrap">
                WidthRequest="300"
                VerticalOptions="Center"
                Placeholder="email"
+               Margin="0,10"
                Keyboard="Email"
                Text="{Binding Email}"/>
         <Entry HorizontalOptions="Center"                    
                WidthRequest="300"
                Placeholder="password"
+                              Margin="0,0,0,10"
+
                VerticalOptions="Center"
                IsPassword="True"
                Text="{Binding Password}"/>
-
 
 
             <Button Text="Submit"
@@ -39,11 +43,19 @@ Wrap="Wrap">
                 VerticalOptions="Center"
                 Clicked="loginUser"/>
 
+            <Label 
+ Text="OR"
+     FontAttributes="Bold"
+     FontSize="15" 
+                TextDecorations="Underline"
+ VerticalOptions="Center" 
+ HorizontalOptions="Center" />
+
             <Button Text="Register"
      HorizontalOptions="Center"         
      WidthRequest="150"
      VerticalOptions="Center"
      Clicked="registerUser"/>
-        </FlexLayout>
+        </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
